@@ -16,11 +16,10 @@ Our published research works.
 
 {%
   include button.html
-  link="research"
-  text="See our publications"
+  link="publications"
+  text="Explore our latest research"
   icon="fa-solid fa-arrow-right"
   flip=true
-  style="bare"
 %}
 
 {% endcapture %}
