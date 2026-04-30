@@ -1,9 +1,9 @@
 ---
-name: New member 
+name: New member2 
 image: images/photo.jpg
 description: Lead Programmer
 role: phd
-group: alumni
+group: alumn
 links:
   email: sarah.johnson@gmail.com
   twitter: sarahjohnson
