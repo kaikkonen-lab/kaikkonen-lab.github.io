@@ -32,7 +32,7 @@ We're an interdisciplinary team of researchers who strive to be rigorous, reprod
 
 ## Alumni
 
-{% include list.html data="members" component="portrait" filters="role: phd, group: alumn" style="small" %}
+{% include list.html data="members" component="portrait" filters="role: phd, group: alum" style="small" %}
 
 
 
