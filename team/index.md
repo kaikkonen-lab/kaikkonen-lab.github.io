@@ -15,7 +15,7 @@ We're an interdisciplinary team of researchers who strive to be rigorous, reprod
 
 {% include list.html data="members" component="portrait" filters="role: pi" %}
 {% include list.html data="members" component="portrait" filters="role: phd, group: " %}
-{% include list.html data="members" component="portrait" filters="role: ms, group: " %}
+
 
 {% include section.html dark=true %}
 
@@ -33,8 +33,8 @@ We're an interdisciplinary team of researchers who strive to be rigorous, reprod
 ## Alumni
 
 {% include list.html data="members" component="portrait" filters="role: phd, group: alum" style="small" %}
-{% include list.html data="members" component="portrait" filters="role: undergrad, group: alum" style="small" %}
-{% include list.html data="members" component="portrait" filters="role: ms, group: alum" style="small" %}
+
+
 
 ## Funding
 
