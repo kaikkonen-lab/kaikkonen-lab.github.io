@@ -5,13 +5,15 @@ nav:
   tooltip: About our team
 ---
 
+{% include section.html %}
+
 # {% include icon.html icon="fa-solid fa-users" %}Team
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+We're an interdisciplinary team of researchers who strive to be rigorous, reproducible, and transparent. Our core values include learning from each other and celebrating the success of others.
 
-{% include section.html %}
+{% include section.html  background="images/background.jpg" dark=true %}
+
+## Current lab members
 
 {% include list.html data="members" component="portrait" filter="role == 'pi'" %}
 {% include list.html data="members" component="portrait" filter="role != 'pi'" %}
