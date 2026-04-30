@@ -26,7 +26,7 @@ Our published research works.
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/publications.jpg"
   link="research"
   title="Our Research"
   text=text
