@@ -1,8 +1,7 @@
 ---
 ---
 
-# kaikkonen-lab's Website
-
+# kaikkonen-lab (CADGEN)
 Our Cardiovascular Genomics lab (@KaikkonenLab) investigates the mechanistic basis of Atherosclerotic Cardiovascular Disease (ASCVD) and cardiometabolic diseases, using a combination of cellular and genetic model systems, single-cell transcriptomics and epigenetics, high-throughput functional genomics techniques, and bioinformatics. We have unique expertise in functional fine-mapping of non-coding GWAS variants using massively parallel reporter assays and cellular models for CRISPR/Cas9-mediated perturbation. This has allowed us to perform the most extensive functional fine-mapping of ASCVD GWAS variants and provide unique insights into the genetic basis of disease. Our lab also hosts a single-cell genomics core and we are committed to leveraging the power of single-cell multiomics and spatial transcriptomics to drive cutting-edge research in the future.
 
 {% include section.html %}
@@ -11,7 +10,7 @@ Our Cardiovascular Genomics lab (@KaikkonenLab) investigates the mechanistic bas
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Our published research works.
 
 {%
   include button.html
@@ -34,7 +33,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+List of all current projects.
 
 {%
   include button.html
@@ -59,7 +58,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Our team members.
 
 {%
   include button.html
