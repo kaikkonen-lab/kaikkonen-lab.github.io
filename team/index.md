@@ -11,27 +11,60 @@ nav:
 
 We're an interdisciplinary team of researchers who strive to be rigorous, reproducible, and transparent. Our core values include learning from each other and celebrating the success of others.
 
-{% include section.html  background="images/background.jpg" dark=true %}
-
 ## Current lab members
 
-{% include list.html data="members" component="portrait" filter="role == 'pi'" %}
-{% include list.html data="members" component="portrait" filter="role != 'pi'" %}
+{% include list.html data="members" component="portrait" filters="role: pi" %}
+{% include list.html data="members" component="portrait" filters="role: phd, group: " %}
+{% include list.html data="members" component="portrait" filters="role: ms, group: " %}
 
-{% include section.html background="images/background.jpg" dark=true %}
+{% include section.html dark=true %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+{%
+  include button.html
+  icon="fa-solid fa-handshake-angle"
+  text="Interested in joining us?"
+  link="join"
+  style="button"
+%}
 
 {% include section.html %}
 
+## Alumni
+
+{% include list.html data="members" component="portrait" filters="role: phd, group: alum" style="small" %}
+{% include list.html data="members" component="portrait" filters="role: undergrad, group: alum" style="small" %}
+{% include list.html data="members" component="portrait" filters="role: ms, group: alum" style="small" %}
+
+## Funding
+
 {% capture content %}
 
-{% include figure.html image="images/photo.jpg" %}
-{% include figure.html image="images/photo.jpg" %}
-{% include figure.html image="images/photo.jpg" %}
+[![BC Children's Hospital Foundation](https://www.bcchr.ca/sites/default/files/microsites/logos/bcchf--logo_0.png)](https://www.bcchf.ca/)
+
+[![Natural Sciences and Engineering Research Council of Canada](/images/NSERC_RGB.jpg)](https://www.nserc-crsng.gc.ca/)
+
+[![Canadian Statistical Sciences Institute](https://i0.wp.com/canssi.ca/wp-content/uploads/CANSSI_Logo.png?resize=1024%2C1024&ssl=1)](https://canssi.ca/)
+
+[![Canadian Institutes
+of Health Research](https://cihr-irsc.gc.ca/images/leaf-cihr-colour-en.jpg)](https://cihr-irsc.gc.ca/)
 
 {% endcapture %}
 
-{% include grid.html style="square" content=content %}
+{% include grid.html content=content %}
+
+{% include section.html %}
+
+{%
+  include figure.html
+  image="images/group3.jpg"
+  caption="Korthauer lab winter social 2024"
+  width="80%"
+%}
+
+{%
+  include figure.html
+  image="images/group2.jpg"
+  caption="Korthauer lab summer social 2023"
+  width="80%"
+%}
