@@ -58,8 +58,7 @@ List of all current projects.
 
 {% capture text %}
 
-Our team members.
-
+We're an interdisciplinary team of researchers who strive to be rigorous, reproducible, and transparent. Our core values include learning from each other and celebrating the success of others.
 {%
   include button.html
   link="team"
