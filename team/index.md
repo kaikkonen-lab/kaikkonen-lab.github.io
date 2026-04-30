@@ -40,14 +40,8 @@ We're an interdisciplinary team of researchers who strive to be rigorous, reprod
 
 {% capture content %}
 
-[![BC Children's Hospital Foundation](https://www.bcchr.ca/sites/default/files/microsites/logos/bcchf--logo_0.png)](https://www.bcchf.ca/)
+[![University of Eastern Finland](https://sites.uef.fi/europeanforestry/wp-content/uploads/sites/62/2020/05/UEF_eng_pysty_1_black-1024x892.jpg)](https://www.uef.fi/fi)
 
-[![Natural Sciences and Engineering Research Council of Canada](/images/NSERC_RGB.jpg)](https://www.nserc-crsng.gc.ca/)
-
-[![Canadian Statistical Sciences Institute](https://i0.wp.com/canssi.ca/wp-content/uploads/CANSSI_Logo.png?resize=1024%2C1024&ssl=1)](https://canssi.ca/)
-
-[![Canadian Institutes
-of Health Research](https://cihr-irsc.gc.ca/images/leaf-cihr-colour-en.jpg)](https://cihr-irsc.gc.ca/)
 
 {% endcapture %}
 
@@ -58,13 +52,13 @@ of Health Research](https://cihr-irsc.gc.ca/images/leaf-cihr-colour-en.jpg)](htt
 {%
   include figure.html
   image="images/group3.jpg"
-  caption="Korthauer lab winter social 2024"
+  caption="Kaikkonen lab summer 2025"
   width="80%"
 %}
 
 {%
   include figure.html
   image="images/group2.jpg"
-  caption="Korthauer lab summer social 2023"
+  caption="Kaikkonen lab winter 2025"
   width="80%"
 %}
