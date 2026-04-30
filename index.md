@@ -41,7 +41,6 @@ List of all current projects.
   link="projects"
   text="Browse our projects"
   icon="fa-solid fa-arrow-right"
-  flip=true
   style="bare"
 %}
 
@@ -66,7 +65,6 @@ Our team members.
   link="team"
   text="Meet our team"
   icon="fa-solid fa-arrow-right"
-  flip=true
   style="bare"
 %}
 
