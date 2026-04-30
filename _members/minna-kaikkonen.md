@@ -1,6 +1,6 @@
 ---
 name: Prof. Minna Kaikkonen
-image: images/people/minna.jpeg
+image: images/people/minna.jpg
 role: pi
 description: Principle investigator
 aliases:
