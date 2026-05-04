@@ -16,6 +16,11 @@ header {
   padding: 20px;
   box-shadow: var(--shadow);
 
+  background-image: var(--image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   @if $sticky {
     position: sticky !important;
     top: 0;
@@ -132,11 +137,24 @@ header:not([data-big]) {
   }
 }
 
+/* Homepage large header */
 header[data-big] {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: $big-padding 20px;
+
+  /*
+    Important:
+    cover crops the image.
+    contain shows the full uploaded header image.
+  */
+  min-height: 520px;
+  padding: 60px 20px;
+
+  background-size: contain !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: #f8f9fd;
 
   @if $sticky {
     top: unset;
@@ -164,5 +182,32 @@ header[data-big] {
 
   .subtitle {
     font-size: var(--large);
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  header[data-big] {
+    min-height: 420px;
+    padding: 45px 20px;
+    background-size: contain !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  header[data-big] {
+    min-height: 320px;
+    padding: 35px 15px;
+    background-size: contain !important;
+    background-position: center center !important;
+  }
+
+  header[data-big] .title {
+    font-size: var(--xl);
+  }
+
+  header[data-big] .subtitle {
+    font-size: var(--medium);
   }
 }
