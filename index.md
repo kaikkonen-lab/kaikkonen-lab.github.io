@@ -2,13 +2,35 @@
 title: Home
 ---
 
+<div class="home-intro">
+
 # Cardiovascular Epigenomics and Gene Regulation
 
-The Kaikkonen Lab investigates the molecular and genetic mechanisms underlying atherosclerotic cardiovascular disease and cardiometabolic disorders. We combine cellular and genetic model systems, single-cell transcriptomics, epigenomics, high-throughput functional genomics, and computational biology to understand how gene regulation shapes cardiovascular disease risk.
+The Kaikkonen Lab investigates how genetic and epigenomic regulatory mechanisms shape atherosclerotic cardiovascular disease and cardiometabolic risk. We combine cellular and genetic model systems, single-cell transcriptomics, epigenomics, high-throughput functional genomics, and computational biology to uncover disease-relevant regulatory mechanisms.
 
 Our work focuses especially on the functional interpretation of non-coding GWAS variants. Using massively parallel reporter assays, CRISPR/Cas9 perturbation, cellular models, and multi-omics analysis, we aim to connect disease-associated genetic variation to regulatory mechanisms, cell states, and biological function.
 
-The lab also hosts a single-cell genomics core and develops integrative approaches for single-cell multiomics and spatial transcriptomics.
+</div>
+
+<div class="focus-grid">
+  <div class="focus-card">
+    <span class="focus-icon">🧬</span>
+    <h3>Functional Genomics</h3>
+    <p>Mapping regulatory variants and enhancer mechanisms linked to cardiovascular disease.</p>
+  </div>
+
+  <div class="focus-card">
+    <span class="focus-icon">🫀</span>
+    <h3>Cardiovascular Biology</h3>
+    <p>Studying vascular and immune cell programs that contribute to atherosclerosis.</p>
+  </div>
+
+  <div class="focus-card">
+    <span class="focus-icon">📊</span>
+    <h3>Computational Multi-omics</h3>
+    <p>Integrating single-cell, spatial, epigenomic, and genetic data to interpret disease risk.</p>
+  </div>
+</div>
 
 {% include section.html %}
 
