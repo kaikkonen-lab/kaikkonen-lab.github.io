@@ -1,0 +1,37 @@
+.background {
+  position: relative;
+  background: #ffffff;
+  color: var(--text);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0;
+  z-index: -2;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  z-index: -1;
+}
+
+header[data-big].background::before {
+  opacity: 1;
+}
+
+header[data-big].background::after {
+  background: linear-gradient(90deg, rgba(7, 24, 43, 0.82) 0%, rgba(7, 24, 43, 0.58) 42%, rgba(7, 24, 43, 0.12) 100%), linear-gradient(to top, rgba(7, 24, 43, 0.45) 0%, rgba(7, 24, 43, 0.06) 62%, rgba(255, 255, 255, 0.06) 100%);
+}
+
+/*# sourceMappingURL=background.css.map */
