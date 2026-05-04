@@ -1,6 +1,20 @@
 ---
 ---
 
+<div class="hero-block">
+  <img src="{{ '/images/cadgen_logo.png' | relative_url }}" alt="Kaikkonen Lab background" class="hero-img">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <p class="hero-kicker">Cardiovascular Genomics • Epigenomics • Gene Regulation</p>
+    <h1>Kaikkonen Lab</h1>
+    <p class="hero-subtitle">
+      Investigating how genetic and epigenomic regulatory mechanisms shape cardiovascular disease risk.
+    </p>
+  </div>
+</div>
+
 # Cardiovascular Epigenomics and Gene Regulation
 
 The Kaikkonen Lab investigates the molecular and genetic mechanisms underlying atherosclerotic cardiovascular disease and cardiometabolic disorders. We combine cellular and genetic model systems, single-cell transcriptomics, epigenomics, high-throughput functional genomics, and computational biology to understand how gene regulation shapes cardiovascular disease risk.
