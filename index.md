@@ -1,19 +1,6 @@
 ---
+title: Home
 ---
-
-<div class="hero-block">
-  <img src="{{ '/images/cadgen_logo.png' | relative_url }}" alt="Kaikkonen Lab background" class="hero-img">
-
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <p class="hero-kicker">Cardiovascular Genomics • Epigenomics • Gene Regulation</p>
-    <h1>Kaikkonen Lab</h1>
-    <p class="hero-subtitle">
-      Investigating how genetic and epigenomic regulatory mechanisms shape cardiovascular disease risk.
-    </p>
-  </div>
-</div>
 
 # Cardiovascular Epigenomics and Gene Regulation
 
