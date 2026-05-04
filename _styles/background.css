@@ -3,6 +3,7 @@
   background: var(--background);
   color: var(--text);
   z-index: 1;
+  overflow: hidden;
 }
 
 .background:before {
@@ -12,9 +13,27 @@
   background-image: var(--image);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  opacity: 0.25;
+  background-position: center center;
+  opacity: 0.42;
+  z-index: -2;
+}
+
+.background:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.72) 42%, rgba(255, 255, 255, 0.45) 100%);
   z-index: -1;
+}
+
+header[data-big].background:before {
+  opacity: 1;
+  background-size: cover;
+  background-position: center center;
+}
+
+header[data-big].background:after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.68) 42%, rgba(255, 255, 255, 0.24) 100%);
 }
 
 /*# sourceMappingURL=background.css.map */
