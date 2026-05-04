@@ -7,18 +7,17 @@ nav:
 
 {% include section.html %}
 
-# {% include icon.html icon="fa-solid fa-users" %}Team
+# {% include icon.html icon="fa-solid fa-users" %} Team
 
-We're an interdisciplinary team of researchers who strive to be rigorous, reproducible, and transparent. Our core values include learning from each other and celebrating the success of others.
+We're an interdisciplinary team of researchers working on cardiovascular epigenomics, gene regulation, and computational approaches for understanding disease mechanisms.
 
 ## Current lab members
 
-{% include list.html data="members" component="portrait" filters="role: pi" %}
-{% include list.html data="members" component="portrait" filters="role: phd" %}
+{% include list.html data="members" component="portrait" filter="group == 'current' and role == 'principal-investigator'" %}
 
+{% include list.html data="members" component="portrait" filter="group == 'current' and role == 'phd'" %}
 
 {% include section.html dark=true %}
-
 
 {%
   include button.html
@@ -32,9 +31,9 @@ We're an interdisciplinary team of researchers who strive to be rigorous, reprod
 
 ## Alumni
 
-{% include list.html data="members" component="portrait" filters="role: phd, group: alum" style="small" %}
+{% include list.html data="members" component="portrait" filter="group == 'alumni'" style="small" %}
 
-
+{% include section.html %}
 
 ## Funding
 
@@ -42,23 +41,8 @@ We're an interdisciplinary team of researchers who strive to be rigorous, reprod
 
 [![University of Eastern Finland](https://sites.uef.fi/europeanforestry/wp-content/uploads/sites/62/2020/05/UEF_eng_pysty_1_black-1024x892.jpg)](https://www.uef.fi/fi)
 
-
 {% endcapture %}
 
 {% include grid.html content=content %}
 
 {% include section.html %}
-
-{%
-  include figure.html
-  image="images/group3.jpg"
-  caption="Kaikkonen lab summer 2025"
-  width="80%"
-%}
-
-{%
-  include figure.html
-  image="images/group2.jpg"
-  caption="Kaikkonen lab winter 2025"
-  width="80%"
-%}
