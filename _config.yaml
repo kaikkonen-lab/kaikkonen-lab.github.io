@@ -1,8 +1,8 @@
 # site properties and page defaults
 title: "Kaikkonen Lab"
-subtitle: "Cardiovascular Epigenomics and Gene Regulation"
+subtitle: "Cardiovascular Epigenomics and Gene Regulation."
 description: "We develop and utilize cutting-edge open-source tools, methods, and resources to analyze, integrate, and interpret large-scale, diverse, multi-omics data; and to understand gene regulation and decipher the role of the non-coding regulatory genome in cardiovascular diseases."
-header: "images/cadgen.png"
+header: ""
 footer: "images/uef_background.jpg"
 proofer: false
 
