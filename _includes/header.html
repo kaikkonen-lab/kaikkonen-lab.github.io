@@ -1,9 +1,14 @@
+{% assign image = page.header | default: site.header %}
 {% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: true %}
 
 <header
-  class="site-header"
+  class="background"
+  style="--image: url('{{ image | relative_url | uri_escape }}')"
   {% if dark == true or dark == false %}
     data-dark="{{ dark }}"
+  {% endif %}
+  {% if page.url == "/" %}
+    data-big
   {% endif %}
 >
   <a href="{{ "/" | relative_url }}" class="home">
