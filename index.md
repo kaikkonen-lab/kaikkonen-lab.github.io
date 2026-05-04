@@ -52,7 +52,7 @@ We study cardiovascular disease mechanisms through functional genomics, gene reg
   link="research"
   text="Explore our research"
   icon="fa-solid fa-arrow-right"
-  flip=true
+  style="bare"
 %}
 
 {% endcapture %}
