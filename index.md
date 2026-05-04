@@ -1,23 +1,31 @@
 ---
 ---
 
-# kaikkonen-lab (CADGEN)
-Our Cardiovascular Genomics lab (@KaikkonenLab) investigates the mechanistic basis of Atherosclerotic Cardiovascular Disease (ASCVD) and cardiometabolic diseases, using a combination of cellular and genetic model systems, single-cell transcriptomics and epigenetics, high-throughput functional genomics techniques, and bioinformatics. We have unique expertise in functional fine-mapping of non-coding GWAS variants using massively parallel reporter assays and cellular models for CRISPR/Cas9-mediated perturbation. This has allowed us to perform the most extensive functional fine-mapping of ASCVD GWAS variants and provide unique insights into the genetic basis of disease. Our lab also hosts a single-cell genomics core and we are committed to leveraging the power of single-cell multiomics and spatial transcriptomics to drive cutting-edge research in the future.
+# Cardiovascular Epigenomics and Gene Regulation
+
+The Kaikkonen Lab investigates the molecular and genetic mechanisms underlying atherosclerotic cardiovascular disease and cardiometabolic disorders. We combine cellular and genetic model systems, single-cell transcriptomics, epigenomics, high-throughput functional genomics, and computational biology to understand how gene regulation shapes cardiovascular disease risk.
+
+Our work focuses especially on the functional interpretation of non-coding GWAS variants. Using massively parallel reporter assays, CRISPR/Cas9 perturbation, cellular models, and multi-omics analysis, we aim to connect disease-associated genetic variation to regulatory mechanisms, cell states, and biological function.
+
+The lab also hosts a single-cell genomics core and develops integrative approaches for single-cell multiomics and spatial transcriptomics.
 
 {% include section.html %}
 
 ## Our vision and mission
-> ##### "**Science and everyday life cannot and should not be separated**." *— Rosalind Franklin*
 
+> ##### “Science and everyday life cannot and should not be separated.”  
+> *— Rosalind Franklin*
+
+{% include section.html %}
 
 {% capture text %}
 
-Our published research works.
+We study cardiovascular disease mechanisms through functional genomics, gene regulation, epigenomics, and variant interpretation.
 
 {%
   include button.html
-  link="publications"
-  text="Explore our latest research"
+  link="research"
+  text="Explore our research"
   icon="fa-solid fa-arrow-right"
   flip=true
 %}
@@ -28,18 +36,18 @@ Our published research works.
   include feature.html
   image="images/publications.jpg"
   link="research"
-  title="Our Research"
+  title="Research"
   text=text
 %}
 
 {% capture text %}
 
-List of all current projects.
+Our projects integrate experimental models, genomics technologies, computational methods, and disease-focused biological questions.
 
 {%
   include button.html
   link="projects"
-  text="Browse our projects"
+  text="Browse projects"
   icon="fa-solid fa-arrow-right"
   style="bare"
 %}
@@ -50,7 +58,7 @@ List of all current projects.
   include feature.html
   image="images/photo.jpg"
   link="projects"
-  title="Our Projects"
+  title="Projects"
   flip=true
   style="bare"
   text=text
@@ -58,11 +66,12 @@ List of all current projects.
 
 {% capture text %}
 
-We're an interdisciplinary team of researchers who strive to be rigorous, reproducible, and transparent. Our core values include learning from each other and celebrating the success of others.
+We are an interdisciplinary team working across cardiovascular biology, functional genomics, single-cell technologies, and computational analysis.
+
 {%
   include button.html
   link="team"
-  text="Meet our team"
+  text="Meet the team"
   icon="fa-solid fa-arrow-right"
   style="bare"
 %}
@@ -73,6 +82,6 @@ We're an interdisciplinary team of researchers who strive to be rigorous, reprod
   include feature.html
   image="images/team.jpg"
   link="team"
-  title="Our Team"
+  title="Team"
   text=text
 %}
