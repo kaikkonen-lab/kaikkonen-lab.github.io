@@ -1,23 +1,21 @@
 ---
 name: Prof. Minna Kaikkonen
 image: images/people/minna.jpg
-role: pi
+role: principal-investigator
+group: current
 description: Principal Investigator
+affiliation: University of Eastern Finland
 aliases:
   - Minna Kaikkonen
   - Minna U. Kaikkonen
-  - 
 links:
   email: minna.kaikkonen@uef.fi
   google-scholar: spd-KjUAAAAJ
   orcid: 0000-0002-4565-1654
-  github: kdkorthauer
-  bluesky: keegankorthauer
   home-page: https://kaikkonen-lab.github.io/
 ---
 
-Minna Kaikkonen (she/her/hers) is a professor at the University of Eastern Finland. 
-
+Minna Kaikkonen is a professor at the University of Eastern Finland and the Principal Investigator of the Kaikkonen Lab.
 
 {% include section.html %}
 
