@@ -2,24 +2,80 @@
 ---
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  padding: 40px;
-  line-height: var(--spacing);
-  box-shadow: var(--shadow);
+  background: #07182b !important;
+  color: #ffffff !important;
+
+  padding: 40px 20px;
+  margin-top: 60px;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* Footer container layout */
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* All text */
+footer,
+footer p,
+footer span,
+footer div {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Links */
 footer a {
-  color: var(--text) !important;
+  color: #9edcff !important;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 footer a:hover {
-  color: var(--primary) !important;
+  color: #67d7ff !important;
+  text-decoration: underline;
 }
 
-footer .icon {
-  font-size: var(--xl);
+/* Icons (if any) */
+footer i,
+footer svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* Images/logos */
+footer img {
+  filter: brightness(0.9) contrast(1.1);
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+footer img:hover {
+  opacity: 1;
+}
+
+/* Divider line */
+footer hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 20px auto;
+  width: 60%;
+}
+
+/* Small text */
+footer small {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Fix any theme override (important) */
+.site-footer,
+.footer,
+footer.background {
+  background: #07182b !important;
+  color: #ffffff !important;
 }
