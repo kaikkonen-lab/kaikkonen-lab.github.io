@@ -5,8 +5,8 @@ header {
   flex-wrap: wrap;
   gap: 22px;
   padding: 18px 42px;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 8px 28px rgba(11, 43, 76, 0.08);
+  background: #07182b;
+  box-shadow: 0 8px 28px rgba(11, 43, 76, 0.16);
   backdrop-filter: blur(12px);
   position: sticky !important;
   top: 0;
@@ -14,7 +14,7 @@ header {
 }
 
 header a {
-  color: var(--text);
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -41,14 +41,14 @@ header a {
 .title {
   font-size: var(--large);
   font-weight: 850;
-  color: #0b2b4c;
+  color: #ffffff;
   letter-spacing: -0.02em;
 }
 
 .subtitle {
-  opacity: 0.75;
+  opacity: 0.9;
   font-weight: 500;
-  color: #8f163c;
+  color: rgba(255, 255, 255, 0.86);
 }
 
 .nav-toggle {
@@ -57,7 +57,7 @@ header a {
   width: 32px;
   height: 32px;
   margin: 0;
-  color: var(--text);
+  color: #ffffff;
   appearance: none;
   cursor: pointer;
 }
@@ -67,7 +67,7 @@ header a {
   position: absolute;
   left: 50%;
   top: 50%;
-  color: var(--text);
+  color: #ffffff;
   font-size: 16px;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -93,12 +93,14 @@ nav {
 nav > a {
   padding: 8px 11px;
   border-radius: 999px;
+  color: #ffffff !important;
+  font-weight: 700;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 nav > a:hover {
-  color: #9b1238;
-  background: rgba(155, 18, 56, 0.08);
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.16);
   transform: translateY(-1px);
 }
 
@@ -168,9 +170,16 @@ header[data-big] nav {
   margin-top: 26px;
   padding: 13px 18px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 12px 38px rgba(0, 0, 0, 0.16);
+  background: rgba(7, 24, 43, 0.94);
+  box-shadow: 0 12px 38px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(12px);
+}
+header[data-big] nav > a {
+  color: #ffffff !important;
+}
+header[data-big] nav > a:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.18);
 }
 
 @media (max-width: 860px) {
