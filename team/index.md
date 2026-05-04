@@ -13,9 +13,29 @@ We're an interdisciplinary team of researchers working on cardiovascular epigeno
 
 ## Current lab members
 
+### Principal Investigator
+
 {% include list.html data="members" component="portrait" filter="group == 'current' and role == 'principal-investigator'" %}
 
-{% include list.html data="members" component="portrait" filter="group == 'current' and role == 'phd'" %}
+### Senior Researchers
+
+{% include list.html data="members" component="portrait" filter="group == 'current' and role == 'senior-researcher'" %}
+
+### Postdoctoral Researchers
+
+{% include list.html data="members" component="portrait" filter="group == 'current' and role == 'postdoctoral-researcher'" %}
+
+### Doctoral Researchers
+
+{% include list.html data="members" component="portrait" filter="group == 'current' and role == 'doctoral-researcher'" %}
+
+### Technicians
+
+{% include list.html data="members" component="portrait" filter="group == 'current' and role == 'technician'" %}
+
+### Other Group Members
+
+{% include list.html data="members" component="portrait" filter="group == 'current' and role == 'other-group-member'" %}
 
 {% include section.html dark=true %}
 
