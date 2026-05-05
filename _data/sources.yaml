@@ -1,0 +1,23 @@
+# Additional metadata for selected Kaikkonen Lab publications.
+# These entries enrich ORCID-generated citations with images and descriptions.
+# The IDs must match DOI IDs in _data/citations.yml after the citation workflow runs.
+
+- id: doi:10.1016/j.ajhg.2023.03.010
+  image: https://ars.els-cdn.com/content/image/1-s2.0-S0002929723000976-gr1.jpg
+  type: paper
+  description: Single-cell and bulk transcriptomic analysis of atherosclerotic lesions to connect disease-associated cell states with coronary artery disease genetic risk.
+
+- id: doi:10.1161/CIRCRESAHA.123.323184
+  image: https://www.ahajournals.org/cms/10.1161/CIRCRESAHA.123.323184/asset/images/large/circresaha.123.323184.fig01.jpeg
+  type: paper
+  description: Single-cell gene-regulatory network analysis of advanced atherosclerotic plaques.
+
+- id: doi:10.1371/journal.pone.0265948
+  image: https://journals.plos.org/plosone/article/figure/image?size=inline&id=10.1371/journal.pone.0265948.g001
+  type: paper
+  description: Study of nuclear microRNA regulation of Vegfa expression in endothelial cells.
+
+- id: doi:10.1016/j.atherosclerosis.2023.04.019
+  image: https://ars.els-cdn.com/content/image/1-s2.0-S0021915023001570-gr1.jpg
+  type: paper
+  description: Review of functional genomics approaches for understanding the genetic basis of coronary artery disease.
