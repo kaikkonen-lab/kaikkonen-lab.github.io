@@ -14,170 +14,189 @@ title: Home
   --soft: #f7fbfd;
 }
 
-.home-pathway {
-  position: relative;
-  overflow: hidden;
-  padding: 3.2rem 2rem;
-  border-radius: 34px;
-  background:
-    radial-gradient(circle at 14% 18%, rgba(0, 210, 190, 0.30), transparent 28%),
-    radial-gradient(circle at 86% 12%, rgba(180, 60, 120, 0.25), transparent 30%),
-    linear-gradient(135deg, #061b3a 0%, #083e67 52%, #0a6265 100%);
-  color: white;
-  margin: 1rem 0 3rem;
+.home-open {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.2rem 0 2.5rem;
 }
 
-.home-pathway::before {
-  content: "";
-  position: absolute;
-  inset: -80px;
-  background:
-    linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.10) 45%, transparent 70%);
-  transform: translateX(-70%);
-  animation: shimmer 7s infinite;
+.home-title {
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  line-height: 1.02;
+  color: var(--navy);
+  margin: 0 0 1rem;
 }
 
-.home-pathway::after {
-  content: "";
-  position: absolute;
-  right: -120px;
-  bottom: -140px;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  border: 36px solid rgba(255,255,255,0.08);
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(-70%); }
-  45% { transform: translateX(70%); }
-  100% { transform: translateX(70%); }
-}
-
-.home-kicker {
-  position: relative;
-  z-index: 1;
-  color: #70fff2;
-  font-weight: 900;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  font-size: .82rem;
-}
-
-.home-heading {
-  position: relative;
-  z-index: 1;
-  color: white;
-  font-size: clamp(2.3rem, 5vw, 4.7rem);
-  line-height: 1.04;
-  max-width: 980px;
-  margin: .4rem 0 1rem;
+.home-title span {
+  color: var(--teal);
 }
 
 .home-lead {
-  position: relative;
-  z-index: 1;
-  max-width: 930px;
   font-size: 1.18rem;
   line-height: 1.75;
-  color: rgba(255,255,255,0.92);
-  margin-bottom: 1.5rem;
+  color: var(--ink);
+  max-width: 850px;
 }
 
 .home-actions {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   gap: .8rem;
-  margin: 1.4rem 0 2rem;
+  margin-top: 1.5rem;
 }
 
 .home-actions a {
-  color: white;
   text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.38);
-  background: rgba(255,255,255,0.13);
-  padding: .7rem 1rem;
+  padding: .75rem 1rem;
   border-radius: 999px;
-  font-weight: 800;
+  font-weight: 900;
+  background: var(--navy);
+  color: white;
   transition: all .25s ease;
 }
 
-.home-actions a:hover {
+.home-actions a.secondary {
   background: white;
   color: var(--navy);
+  border: 1px solid var(--line);
+}
+
+.home-actions a:hover {
+  background: var(--teal);
+  color: white;
   transform: translateY(-3px);
 }
 
-.pathway-grid {
+.research-orbit {
   position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: .9rem;
-  margin-top: 1.4rem;
+  height: 360px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at center, rgba(0,166,166,.14), transparent 35%),
+    linear-gradient(135deg, #f8fcfd, #eef7fa);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  box-shadow: 0 16px 38px rgba(6, 38, 79, 0.08);
 }
 
-.pathway-step {
-  position: relative;
-  text-align: center;
-  padding: 1.15rem .9rem;
-  border-radius: 22px;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.24);
-  backdrop-filter: blur(8px);
-  transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+.orbit-ring {
+  position: absolute;
+  inset: 55px;
+  border: 2px dashed rgba(11, 85, 112, .28);
+  border-radius: 50%;
+  animation: rotateRing 28s linear infinite;
 }
 
-.pathway-step:hover {
-  transform: translateY(-8px) scale(1.02);
-  background: rgba(255,255,255,0.20);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+.orbit-ring.two {
+  inset: 95px;
+  animation-duration: 20s;
+  animation-direction: reverse;
 }
 
-.pathway-step .icon {
-  font-size: 2rem;
-  margin-bottom: .5rem;
-  animation: floatIcon 4s ease-in-out infinite;
+@keyframes rotateRing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-.pathway-step:nth-child(2) .icon { animation-delay: .4s; }
-.pathway-step:nth-child(3) .icon { animation-delay: .8s; }
-.pathway-step:nth-child(4) .icon { animation-delay: 1.2s; }
-.pathway-step:nth-child(5) .icon { animation-delay: 1.6s; }
-
-@keyframes floatIcon {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-.pathway-step strong {
-  display: block;
+.orbit-heart {
+  position: absolute;
+  inset: 125px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--berry), #b43b6b);
   color: white;
-  margin-bottom: .35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.3rem;
+  box-shadow: 0 18px 35px rgba(123, 30, 74, .25);
+  animation: pulseHeart 3.5s ease-in-out infinite;
 }
 
-.pathway-step span {
-  display: block;
-  color: rgba(255,255,255,0.80);
-  font-size: .9rem;
-  line-height: 1.4;
+@keyframes pulseHeart {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
 }
 
-.page-heading {
-  color: var(--navy);
-  font-size: 2.15rem;
-  margin: .35rem 0 1rem;
+.orbit-node {
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  border-radius: 24px;
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 26px rgba(6, 38, 79, .10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  animation: floatNode 4s ease-in-out infinite;
 }
 
-.page-kicker {
+.orbit-node.n1 { top: 35px; left: 45%; animation-delay: 0s; }
+.orbit-node.n2 { top: 135px; right: 28px; animation-delay: .5s; }
+.orbit-node.n3 { bottom: 35px; right: 25%; animation-delay: 1s; }
+.orbit-node.n4 { bottom: 70px; left: 35px; animation-delay: 1.5s; }
+.orbit-node.n5 { top: 105px; left: 40px; animation-delay: 2s; }
+
+@keyframes floatNode {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+.section-kicker {
   color: var(--teal);
   font-weight: 900;
   letter-spacing: .08em;
   text-transform: uppercase;
   font-size: .82rem;
   margin-top: 2.5rem;
+}
+
+.section-title {
+  color: var(--navy);
+  font-size: 2.15rem;
+  margin: .3rem 0 1rem;
+}
+
+.discovery-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: .9rem;
+  margin: 1.4rem 0 3rem;
+}
+
+.discovery-step {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(6, 38, 79, 0.07);
+  transition: all .25s ease;
+}
+
+.discovery-step:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 38px rgba(6, 38, 79, 0.13);
+}
+
+.discovery-step .icon {
+  font-size: 2rem;
+  margin-bottom: .45rem;
+}
+
+.discovery-step strong {
+  display: block;
+  color: var(--navy);
+  margin-bottom: .3rem;
+}
+
+.discovery-step span {
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.45;
 }
 
 .gateway-grid {
@@ -188,9 +207,7 @@ title: Home
 }
 
 .gateway-card {
-  position: relative;
   overflow: hidden;
-  min-height: 280px;
   border-radius: 30px;
   border: 1px solid var(--line);
   background: white;
@@ -205,7 +222,7 @@ title: Home
 
 .gateway-card img {
   width: 100%;
-  height: 150px;
+  height: 155px;
   object-fit: cover;
   display: block;
   transition: transform .45s ease;
@@ -251,12 +268,6 @@ title: Home
   margin: 3rem 0;
 }
 
-.quote-panel blockquote {
-  margin: 0;
-  border-left: 0;
-  padding: 0;
-}
-
 .quote-panel p {
   color: rgba(255,255,255,.93);
   font-size: 1.22rem;
@@ -273,69 +284,88 @@ title: Home
 }
 
 @media (max-width: 950px) {
-  .pathway-grid,
+  .home-open,
+  .discovery-strip,
   .gateway-grid {
     grid-template-columns: 1fr;
   }
 
-  .home-pathway {
-    padding: 2.6rem 1.4rem;
+  .research-orbit {
+    height: 310px;
+  }
+
+  .orbit-heart {
+    inset: 105px;
   }
 }
 </style>
 
 <div class="home-page">
 
-<section class="home-pathway">
-  <div class="home-kicker">Discovery pipeline</div>
+<section class="home-open">
+  <div>
+    <h1 class="home-title">Regulatory genomics of <span>cardiovascular disease</span></h1>
 
-  <div class="home-heading">A connected path from genetics to cardiovascular translation</div>
+    <p class="home-lead">
+      The Kaikkonen Lab investigates how genetic and epigenomic regulatory mechanisms shape atherosclerotic cardiovascular disease and cardiometabolic risk. We connect disease-associated genetic variation to regulatory mechanisms, cellular states, and biological function using functional genomics, single-cell technologies, multi-omics, and computational biology.
+    </p>
 
-  <p class="home-lead">
-    The Kaikkonen Lab investigates how genetic and epigenomic regulatory mechanisms shape atherosclerotic cardiovascular disease and cardiometabolic risk. We connect disease-associated genetic variation to regulatory mechanisms, cellular states, and biological function using functional genomics, single-cell technologies, multi-omics, and computational biology.
-  </p>
-
-  <div class="home-actions">
-    <a href="research/">Explore research</a>
-    <a href="projects/">View projects</a>
-    <a href="team/">Meet the team</a>
+    <div class="home-actions">
+      <a href="research/">Explore research</a>
+      <a class="secondary" href="projects/">View projects</a>
+      <a class="secondary" href="team/">Meet the team</a>
+    </div>
   </div>
 
-  <div class="pathway-grid">
-    <div class="pathway-step">
-      <div class="icon">🧬</div>
-      <strong>Genetic risk</strong>
-      <span>GWAS loci and disease-associated variants</span>
-    </div>
-
-    <div class="pathway-step">
-      <div class="icon">🎯</div>
-      <strong>Prioritization</strong>
-      <span>Causal regulatory variant discovery</span>
-    </div>
-
-    <div class="pathway-step">
-      <div class="icon">🔬</div>
-      <strong>Validation</strong>
-      <span>MPRA, CRISPR, and cellular models</span>
-    </div>
-
-    <div class="pathway-step">
-      <div class="icon">🧫</div>
-      <strong>Cell states</strong>
-      <span>Single-cell and spatial disease biology</span>
-    </div>
-
-    <div class="pathway-step">
-      <div class="icon">🫀</div>
-      <strong>Translation</strong>
-      <span>Mechanisms, prediction, and therapeutic insight</span>
-    </div>
+  <div class="research-orbit">
+    <div class="orbit-ring"></div>
+    <div class="orbit-ring two"></div>
+    <div class="orbit-heart">♥</div>
+    <div class="orbit-node n1">🧬</div>
+    <div class="orbit-node n2">🔬</div>
+    <div class="orbit-node n3">🧫</div>
+    <div class="orbit-node n4">📊</div>
+    <div class="orbit-node n5">🎯</div>
   </div>
 </section>
 
-<div class="page-kicker">Explore</div>
-<div class="page-heading">Learn more about our work</div>
+<div class="section-kicker">Discovery pipeline</div>
+<div class="section-title">A connected path from genetics to cardiovascular translation</div>
+
+<div class="discovery-strip">
+  <div class="discovery-step">
+    <div class="icon">🧬</div>
+    <strong>Genetic risk</strong>
+    <span>GWAS loci and disease-associated variants</span>
+  </div>
+
+  <div class="discovery-step">
+    <div class="icon">🎯</div>
+    <strong>Prioritization</strong>
+    <span>Causal regulatory variant discovery</span>
+  </div>
+
+  <div class="discovery-step">
+    <div class="icon">🔬</div>
+    <strong>Validation</strong>
+    <span>MPRA, CRISPR, and cellular models</span>
+  </div>
+
+  <div class="discovery-step">
+    <div class="icon">🧫</div>
+    <strong>Cell states</strong>
+    <span>Single-cell and spatial disease biology</span>
+  </div>
+
+  <div class="discovery-step">
+    <div class="icon">🫀</div>
+    <strong>Translation</strong>
+    <span>Mechanisms, prediction, and therapeutic insight</span>
+  </div>
+</div>
+
+<div class="section-kicker">Explore</div>
+<div class="section-title">Learn more about our work</div>
 
 <div class="gateway-grid">
   <div class="gateway-card">
@@ -367,10 +397,8 @@ title: Home
 </div>
 
 <section class="quote-panel">
-  <blockquote>
-    <p>“Science and everyday life cannot and should not be separated.”</p>
-    <cite>— Rosalind Franklin</cite>
-  </blockquote>
+  <p>“Science and everyday life cannot and should not be separated.”</p>
+  <cite>— Rosalind Franklin</cite>
 </section>
 
 </div>
