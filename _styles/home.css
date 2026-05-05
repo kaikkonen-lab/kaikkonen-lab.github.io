@@ -95,110 +95,33 @@
   box-shadow: 0 12px 30px rgba(7, 29, 53, 0.08);
 }
 
-/* HERO VISUAL */
-.hero-visual {
+/* HERO IMAGE */
+.hero-image-card {
   position: relative;
   min-height: 540px;
   border-radius: 46px;
   overflow: hidden;
-  background: linear-gradient(145deg, rgba(7, 29, 53, 0.96), rgba(8, 74, 88, 0.94)), radial-gradient(circle at 50% 50%, rgba(15, 166, 166, 0.35), transparent 45%);
-  box-shadow: 0 34px 90px rgba(7, 29, 53, 0.26);
+  background: #071d35;
+  box-shadow: 0 34px 90px rgba(7, 29, 53, 0.24);
 }
 
-.hero-visual::before {
+.hero-image-card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: radial-gradient(circle at 50% 50%, black 0%, transparent 76%);
+  background: linear-gradient(to top, rgba(7, 29, 53, 0.38), transparent 55%), linear-gradient(135deg, rgba(143, 32, 72, 0.16), rgba(15, 166, 166, 0.16));
+  pointer-events: none;
 }
 
-.orbit {
-  position: absolute;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+.hero-image-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+  object-fit: cover;
+  transform: scale(1.04);
 }
 
-.orbit-a {
-  width: 390px;
-  height: 390px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-18deg);
-}
-
-.orbit-b {
-  width: 270px;
-  height: 270px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(24deg);
-  border-style: dashed;
-}
-
-.heart-system {
-  position: absolute;
-  inset: 0;
-}
-
-.heart-core {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 132px;
-  height: 132px;
-  display: grid;
-  place-items: center;
-  transform: translate(-50%, -50%);
-  border-radius: 42px;
-  color: #ffffff;
-  font-size: 4rem;
-  background: radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.26), transparent 30%), linear-gradient(135deg, var(--berry), #173250);
-  box-shadow: 0 26px 60px rgba(143, 32, 72, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.18);
-}
-
-.signal {
-  position: absolute;
-  padding: 13px 17px;
-  border-radius: 999px;
-  color: #ffffff;
-  font-weight: 850;
-  font-size: 0.88rem;
-  letter-spacing: 0.03em;
-  background: rgba(255, 255, 255, 0.13);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.16);
-}
-
-.signal-1 {
-  left: 12%;
-  top: 20%;
-}
-
-.signal-2 {
-  right: 11%;
-  top: 24%;
-}
-
-.signal-3 {
-  right: 15%;
-  bottom: 22%;
-}
-
-.signal-4 {
-  left: 14%;
-  bottom: 25%;
-}
-
-.signal-5 {
-  left: 50%;
-  bottom: 11%;
-  transform: translateX(-50%);
-}
-
-/* STATEMENT */
+/* RESEARCH STATEMENT */
 .research-statement {
   width: min(1120px, 100% - 44px);
   margin: 0 auto 96px;
@@ -243,7 +166,7 @@
   margin: 0 0 104px -50vw;
   padding: 84px 22px;
   color: #ffffff;
-  background: radial-gradient(circle at 15% 15%, rgba(15, 166, 166, 0.32), transparent 32%), radial-gradient(circle at 85% 10%, rgba(143, 32, 72, 0.3), transparent 30%), linear-gradient(135deg, #061625 0%, #08233f 46%, #074f5d 100%);
+  background: radial-gradient(circle at 12% 18%, rgba(15, 166, 166, 0.28), transparent 34%), radial-gradient(circle at 86% 14%, rgba(143, 32, 72, 0.24), transparent 30%), linear-gradient(135deg, #061625 0%, #08233f 46%, #074f5d 100%);
   overflow: hidden;
 }
 
@@ -288,47 +211,203 @@
 .pipeline-map {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 0;
-  border-radius: 34px;
+  gap: 18px;
+}
+
+.pipeline-card {
+  position: relative;
+  min-height: 292px;
+  padding: 24px 22px 26px;
+  border-radius: 28px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.07);
+  isolation: isolate;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.075));
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.16);
   backdrop-filter: blur(14px);
+  transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
 }
 
-.pipeline-map article {
-  min-height: 250px;
-  padding: 30px 24px;
-  border-right: 1px solid rgba(255, 255, 255, 0.14);
-  transition: background 0.22s ease, transform 0.22s ease;
+.pipeline-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -2;
+  opacity: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.22), transparent 42%), linear-gradient(135deg, rgba(15, 166, 166, 0.28), rgba(143, 32, 72, 0.16));
+  transition: opacity 0.24s ease;
 }
 
-.pipeline-map article:last-child {
-  border-right: 0;
+.pipeline-card::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  top: 91px;
+  height: 1px;
+  z-index: -1;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.36), transparent);
 }
 
-.pipeline-map article:hover {
-  background: rgba(255, 255, 255, 0.12);
+.pipeline-card:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.095));
+  border-color: rgba(255, 255, 255, 0.34);
+  box-shadow: 0 30px 74px rgba(0, 0, 0, 0.22);
 }
 
-.pipeline-map span {
-  display: block;
-  margin-bottom: 44px;
-  color: rgba(255, 255, 255, 0.48);
+.pipeline-card:hover::before {
+  opacity: 1;
+}
+
+.pipeline-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.78rem;
   font-weight: 950;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.09em;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.pipeline-map h3 {
-  margin: 0 0 12px;
+.pipeline-card h3 {
+  margin: 22px 0 11px;
   color: #ffffff;
-  font-size: 1.18rem;
+  font-size: 1.08rem;
+  line-height: 1.22;
 }
 
-.pipeline-map p {
+.pipeline-card p {
   margin: 0;
   color: rgba(255, 255, 255, 0.72);
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.58;
+}
+
+.pipeline-graphic {
+  position: relative;
+  height: 82px;
+  margin: 2px 0 6px;
+}
+
+/* 01 Genetic risk */
+.pipeline-card.genetic .pipeline-graphic {
+  background: linear-gradient(90deg, transparent 0 7%, rgba(255, 255, 255, 0.35) 7% 8%, transparent 8% 18%, rgba(255, 255, 255, 0.25) 18% 19%, transparent 19% 31%, rgba(255, 255, 255, 0.42) 31% 32%, transparent 32% 48%, rgba(255, 255, 255, 0.24) 48% 49%, transparent 49% 66%, rgba(255, 255, 255, 0.38) 66% 67%, transparent 67% 100%), linear-gradient(180deg, transparent 39px, rgba(255, 255, 255, 0.38) 40px, transparent 41px);
+}
+
+.pipeline-card.genetic .pipeline-graphic::before,
+.pipeline-card.genetic .pipeline-graphic::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  background: rgba(15, 166, 166, 0.95);
+  box-shadow: 0 0 24px rgba(15, 166, 166, 0.55);
+}
+
+.pipeline-card.genetic .pipeline-graphic::before {
+  width: 9px;
+  height: 9px;
+  left: 31%;
+  top: 36px;
+}
+
+.pipeline-card.genetic .pipeline-graphic::after {
+  width: 7px;
+  height: 7px;
+  left: 66%;
+  top: 37px;
+}
+
+/* 02 Chromatin regulation */
+.pipeline-card.chromatin .pipeline-graphic {
+  background: radial-gradient(circle at 16% 66%, rgba(255, 255, 255, 0.58) 0 4px, transparent 5px), radial-gradient(circle at 50% 36%, rgba(15, 166, 166, 0.92) 0 5px, transparent 6px), radial-gradient(circle at 84% 66%, rgba(255, 255, 255, 0.58) 0 4px, transparent 5px);
+}
+
+.pipeline-card.chromatin .pipeline-graphic::before,
+.pipeline-card.chromatin .pipeline-graphic::after {
+  content: "";
+  position: absolute;
+  inset: 18px 12px;
+  border-top: 2px solid rgba(255, 255, 255, 0.42);
+  border-radius: 50% 50% 0 0;
+}
+
+.pipeline-card.chromatin .pipeline-graphic::after {
+  inset: 34px 36px 0;
+  border-top-color: rgba(15, 166, 166, 0.72);
+}
+
+/* 03 Cell states */
+.pipeline-card.cellstate .pipeline-graphic {
+  background: radial-gradient(circle at 23% 32%, rgba(255, 255, 255, 0.58) 0 8px, transparent 9px), radial-gradient(circle at 42% 48%, rgba(15, 166, 166, 0.88) 0 10px, transparent 11px), radial-gradient(circle at 62% 30%, rgba(255, 255, 255, 0.44) 0 7px, transparent 8px), radial-gradient(circle at 74% 60%, rgba(143, 32, 72, 0.72) 0 9px, transparent 10px), radial-gradient(circle at 34% 70%, rgba(255, 255, 255, 0.36) 0 6px, transparent 7px);
+}
+
+.pipeline-card.cellstate .pipeline-graphic::before {
+  content: "";
+  position: absolute;
+  inset: 12px 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+}
+
+/* 04 Computational integration */
+.pipeline-card.computation .pipeline-graphic {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+  padding: 12px 8px;
+}
+
+.pipeline-card.computation .pipeline-graphic::before {
+  content: "";
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(15, 166, 166, 0.6), rgba(143, 32, 72, 0.38));
+  mask-image: linear-gradient(90deg, black 0 12%, transparent 12% 15%, black 15% 27%, transparent 27% 30%, black 30% 42%, transparent 42% 45%, black 45% 57%, transparent 57% 60%, black 60% 72%, transparent 72% 75%, black 75% 87%, transparent 87% 90%, black 90%);
+  border-radius: 14px;
+}
+
+.pipeline-card.computation .pipeline-graphic::after {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  right: 13px;
+  top: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-left-color: rgba(15, 166, 166, 0.95);
+}
+
+/* 05 Functional validation */
+.pipeline-card.validation .pipeline-graphic {
+  background: linear-gradient(180deg, transparent 18px, rgba(255, 255, 255, 0.18) 19px, transparent 20px), linear-gradient(90deg, transparent 8%, rgba(255, 255, 255, 0.26) 8% 9%, transparent 9% 28%, rgba(15, 166, 166, 0.74) 28% 29%, transparent 29% 48%, rgba(255, 255, 255, 0.26) 48% 49%, transparent 49% 68%, rgba(143, 32, 72, 0.65) 68% 69%, transparent 69%);
+}
+
+.pipeline-card.validation .pipeline-graphic::before {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 8%;
+  bottom: 18px;
+  height: 42px;
+  background: linear-gradient(135deg, transparent 0 8%, rgba(255, 255, 255, 0.46) 8% 10%, transparent 10% 23%, rgba(15, 166, 166, 0.86) 23% 27%, transparent 27% 42%, rgba(255, 255, 255, 0.42) 42% 45%, transparent 45% 62%, rgba(143, 32, 72, 0.75) 62% 67%, transparent 67%);
+}
+
+.pipeline-card.validation .pipeline-graphic::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 8%;
+  bottom: 17px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.34);
 }
 
 /* SCIENCE GRID */
@@ -498,13 +577,12 @@
   .explore-grid {
     grid-template-columns: 1fr;
   }
-  .pipeline-map article {
+  .pipeline-card {
     min-height: auto;
-    border-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
   }
-  .pipeline-map article:last-child {
-    border-bottom: 0;
+  .hero-image-card,
+  .hero-image-card img {
+    min-height: 430px;
   }
   .research-statement {
     grid-template-columns: 1fr;
@@ -520,15 +598,12 @@
   .research-statement {
     width: min(100% - 30px, 1240px);
   }
-  .hero-visual {
-    min-height: 470px;
+  .hero-image-card,
+  .hero-image-card img {
+    min-height: 360px;
   }
   .hero-actions a {
     width: 100%;
-  }
-  .signal {
-    font-size: 0.75rem;
-    padding: 10px 13px;
   }
   .science-card,
   .large-card {
