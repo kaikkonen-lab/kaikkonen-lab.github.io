@@ -79,7 +79,7 @@ Our projects integrate experimental models, genomics technologies, computational
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/research_logo.png"
   link="projects"
   title="Projects"
   flip=true
