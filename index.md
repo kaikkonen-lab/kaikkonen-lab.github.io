@@ -7,12 +7,10 @@ title: Home
   <section class="lab-hero">
     <div class="hero-copy">
 
-      <p class="eyebrow">
-        Kaikkonen Lab · Cardiovascular regulatory genomics
-      </p>
+      <p class="eyebrow">Kaikkonen Lab · Cardiovascular regulatory genomics</p>
 
       <div class="hero-image-wide">
-        <img src="images/research_logo.png" alt="Kaikkonen Lab research overview">
+        <img src="images/research_logo.png" alt="Kaikkonen Lab cardiovascular regulatory genomics research">
       </div>
 
       <h1>
@@ -36,14 +34,11 @@ title: Home
 
   <section class="research-statement">
     <div class="statement-number">01</div>
-
     <div>
       <p class="eyebrow">Research philosophy</p>
-
       <h2>
         We connect molecular mechanisms to disease-relevant biology.
       </h2>
-
       <p>
         Cardiovascular disease is driven by complex interactions between inherited
         risk, regulatory elements, immune and vascular cell states, and environmental
@@ -54,12 +49,9 @@ title: Home
   </section>
 
   <section class="pipeline-section">
-
     <div class="pipeline-header">
       <p class="eyebrow light">Discovery pipeline</p>
-
       <h2>From variant to mechanism</h2>
-
       <p>
         Our workflow links genetic risk to regulatory function, cell-state biology,
         and experimentally testable disease mechanisms.
@@ -67,7 +59,6 @@ title: Home
     </div>
 
     <div class="pipeline-map">
-
       <article class="pipeline-card genetic">
         <span>01</span>
         <div class="pipeline-graphic"></div>
@@ -102,19 +93,16 @@ title: Home
         <h3>Functional validation</h3>
         <p>Experimental systems to test disease-relevant hypotheses.</p>
       </article>
-
     </div>
   </section>
 
   <section class="science-grid-section">
-
     <div class="section-intro">
       <p class="eyebrow">Scientific focus</p>
       <h2>Three connected layers of discovery</h2>
     </div>
 
     <div class="science-grid">
-
       <article class="science-card large-card">
         <p class="card-kicker">Layer 01</p>
         <h3>Regulatory genomics</h3>
@@ -142,19 +130,16 @@ title: Home
           regulatory programs and candidate mechanisms.
         </p>
       </article>
-
     </div>
   </section>
 
   <section class="explore-section">
-
     <div class="section-intro">
       <p class="eyebrow">Explore the lab</p>
       <h2>Science, people, and projects</h2>
     </div>
 
     <div class="explore-grid">
-
       <a href="research/" class="explore-card">
         <img src="images/research_logo.png" alt="Research">
         <div>
@@ -181,7 +166,6 @@ title: Home
           <span>Meet the team →</span>
         </div>
       </a>
-
     </div>
   </section>
 
