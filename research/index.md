@@ -13,16 +13,14 @@ nav:
   --ink: #102033;
   --muted: #617487;
   --line: rgba(7, 29, 53, 0.12);
-}
 
-/* LAYOUT */
+  color: var(--ink);
+}
 
 .research-container {
   width: min(1100px, calc(100% - 40px));
   margin: 60px auto 80px;
 }
-
-/* HEADER */
 
 .section-kicker {
   margin: 0 0 12px;
@@ -41,11 +39,9 @@ nav:
   letter-spacing: -0.04em;
 }
 
-/* PROFILE PANEL */
-
 .profile-panel {
   margin-top: 30px;
-  padding: 36px;
+  padding: 34px;
   border-radius: 24px;
   background: #ffffff;
   border: 1px solid var(--line);
@@ -55,23 +51,24 @@ nav:
 .profile-panel p {
   margin: 0;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .profile-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
 .profile-actions a {
   display: inline-flex;
   align-items: center;
-  padding: 8px 14px;
+  min-height: 40px;
+  padding: 0 15px;
   border-radius: 999px;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 850;
   font-size: 0.9rem;
   background: var(--navy);
   color: white;
@@ -79,45 +76,45 @@ nav:
 }
 
 .profile-actions a.secondary {
-  background: white;
+  background: #ffffff;
   color: var(--navy);
   border: 1px solid var(--line);
 }
 
 .profile-actions a:hover {
   background: var(--teal);
-  color: white;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
-
-/* PUBLICATIONS */
 
 .publications-section {
   margin-top: 60px;
 }
 
 .publication-toolbar {
-  margin: 20px 0 30px;
-  padding: 20px;
-  border-radius: 20px;
+  margin: 22px 0 32px;
+  padding: 22px;
+  border-radius: 22px;
   background: #ffffff;
   border: 1px solid var(--line);
+  box-shadow: 0 14px 40px rgba(7, 29, 53, 0.05);
 }
 
 .publication-note {
-  margin: 0 0 14px;
+  margin: 0 0 16px;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.96rem;
+  line-height: 1.6;
 }
-
-/* RESPONSIVE */
 
 @media (max-width: 640px) {
   .research-container {
     width: calc(100% - 30px);
-    margin-top: 40px;
+    margin-top: 42px;
   }
 
-  .profile-panel {
+  .profile-panel,
+  .publication-toolbar {
     padding: 24px;
   }
 
@@ -132,13 +129,17 @@ nav:
 
   <div class="research-container">
 
-    <div class="section-kicker">Publications</div>
-    <h1 class="section-title">Kaikkonen Lab publications</h1>
+    <p class="section-kicker">Publications</p>
+
+    <h1 class="section-title">
+      Kaikkonen Lab publications
+    </h1>
 
     <div class="profile-panel">
       <p>
-        For a complete and continuously updated list of publications, refer to the external profiles below.
-        The list on this page reflects publications included in the website database.
+        Publications on this page are generated from Minna Kaikkonen-Määttä’s ORCID record
+        and the website citation database. For the complete and continuously updated
+        publication record, use the external profile links below.
       </p>
 
       <div class="profile-actions">
@@ -148,11 +149,17 @@ nav:
       </div>
     </div>
 
-    <div class="publications-section">
+    <section id="publications" class="publications-section">
+
+      <p class="section-kicker">Publication database</p>
+
+      <h2 class="section-title">
+        Recent publications
+      </h2>
 
       <div class="publication-toolbar">
         <p class="publication-note">
-          Search publications by title, author, or keyword.
+          Search publications by title, author, journal, year, or keyword.
         </p>
 
         {% include search-box.html %}
@@ -161,7 +168,7 @@ nav:
 
       {% include list.html data="citations" component="citation" style="rich" %}
 
-    </div>
+    </section>
 
   </div>
 
