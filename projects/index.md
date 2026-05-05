@@ -87,7 +87,6 @@ nav:
   transform: translateY(-2px);
 }
 
-.logic-section,
 .projects-section,
 .foundation-section,
 .vision-section,
@@ -115,67 +114,6 @@ nav:
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.7;
-}
-
-/* RESEARCH LOGIC */
-
-.logic-section {
-  margin-bottom: 92px;
-}
-
-.research-map {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
-}
-
-.map-node {
-  position: relative;
-  min-height: 250px;
-  padding: 30px 24px;
-  background: #ffffff;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.map-node:hover {
-  background: var(--soft);
-}
-
-.map-node span {
-  display: inline-flex;
-  margin-bottom: 52px;
-  color: rgba(143, 32, 72, 0.35);
-  font-size: 0.82rem;
-  font-weight: 950;
-  letter-spacing: 0.14em;
-}
-
-.map-node h3 {
-  margin: 0 0 12px;
-  color: var(--navy);
-  font-size: 1.08rem;
-  line-height: 1.25;
-  letter-spacing: -0.025em;
-}
-
-.map-node p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.96rem;
-  line-height: 1.62;
-}
-
-.map-node::after {
-  content: "";
-  position: absolute;
-  top: 50px;
-  left: 24px;
-  right: 24px;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(15, 166, 166, 0.55), transparent);
 }
 
 /* PROJECTS */
@@ -469,7 +407,6 @@ nav:
 /* RESPONSIVE */
 
 @media (max-width: 1020px) {
-  .research-map,
   .foundation-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -487,7 +424,6 @@ nav:
 
 @media (max-width: 680px) {
   .projects-hero,
-  .logic-section,
   .projects-section,
   .foundation-section,
   .vision-section,
@@ -499,7 +435,6 @@ nav:
     margin-top: 48px;
   }
 
-  .research-map,
   .foundation-grid {
     grid-template-columns: 1fr;
   }
@@ -543,50 +478,6 @@ nav:
       <a href="#singlecell">Single-cell & spatial genomics</a>
       <a href="#finemapping">Functional fine-mapping</a>
       <a href="#multimodal">Multimodal translation</a>
-    </div>
-  </section>
-
-  <section class="logic-section">
-    <div class="section-heading">
-      <p class="section-kicker">Research logic</p>
-      <h2>A connected discovery pipeline</h2>
-      <p class="description">
-        Our projects are organized around a variant-to-function framework:
-        identifying genetic signals, resolving their regulatory consequences,
-        placing them in cellular context, and interpreting their disease relevance.
-      </p>
-    </div>
-
-    <div class="research-map">
-      <article class="map-node">
-        <span>01</span>
-        <h3>Genetic variation</h3>
-        <p>GWAS loci, disease-associated variants, and inherited cardiovascular risk.</p>
-      </article>
-
-      <article class="map-node">
-        <span>02</span>
-        <h3>Causal prioritization</h3>
-        <p>Fine-mapping and functional prioritization of regulatory variants.</p>
-      </article>
-
-      <article class="map-node">
-        <span>03</span>
-        <h3>Functional mechanisms</h3>
-        <p>Enhancers, target genes, perturbation assays, and regulatory networks.</p>
-      </article>
-
-      <article class="map-node">
-        <span>04</span>
-        <h3>Cellular context</h3>
-        <p>Single-cell, multiome, and spatial mapping of disease-state programs.</p>
-      </article>
-
-      <article class="map-node">
-        <span>05</span>
-        <h3>Translation</h3>
-        <p>Mechanism-aware interpretation of cardiovascular disease biology.</p>
-      </article>
     </div>
   </section>
 
