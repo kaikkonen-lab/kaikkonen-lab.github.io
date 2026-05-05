@@ -5,11 +5,93 @@ nav:
   tooltip: Ongoing and past research in the Kaikkonen Lab
 ---
 
-# {% include icon.html icon="fa-solid fa-flask" %} Research Projects
+# {% include icon.html icon="fa-solid fa-flask" %} Research
 
-The Cardiovascular Genomics — Kaikkonen Lab investigates the genetic and molecular mechanisms underlying atherosclerotic cardiovascular disease (ASCVD) and related cardiometabolic disorders.
+Our research focuses on uncovering how **genetic variation drives cardiovascular disease**, and translating this knowledge into **mechanistic insight and clinical impact**.
 
-Our research integrates **functional genomics, single-cell biology, and computational approaches** to move from genetic association to mechanistic understanding and clinical translation.
+We combine **functional genomics, single-cell biology, and computational approaches** to move from association → mechanism → translation.
+
+---
+
+{% include section.html %}
+
+# Explore Our Research
+
+{% capture col1 %}
+
+## 🔬 Genetic Discovery
+
+From genome-wide association studies to identifying causal variants.
+
+{%
+  include button.html
+  text="GWAS & Variant Discovery"
+  link="#miracle"
+  style="button"
+%}
+
+{%
+  include button.html
+  text="Fine-Mapping & Prioritization"
+  link="#finemapping"
+  style="button"
+%}
+
+{% endcapture %}
+
+{% capture col2 %}
+
+## 🧬 Functional Genomics
+
+Understanding how variants regulate gene expression.
+
+{%
+  include button.html
+  text="Regulatory Variant Function"
+  link="#secret"
+  style="button"
+%}
+
+{%
+  include button.html
+  text="Gene Regulatory Networks"
+  link="#regulation"
+  style="button"
+%}
+
+{% endcapture %}
+
+{% capture col3 %}
+
+## 🧫 Cellular Context
+
+Decoding disease at the cell-type level.
+
+{%
+  include button.html
+  text="Single-Cell & Spatial Omics"
+  link="#singlecell"
+  style="button"
+%}
+
+{% endcapture %}
+
+{% capture col4 %}
+
+## 🧠 Integration & Translation
+
+Connecting molecular biology to disease outcomes.
+
+{%
+  include button.html
+  text="Multimodal Integration"
+  link="#multimodal"
+  style="button"
+%}
+
+{% endcapture %}
+
+{% include cols.html col1=col1 col2=col2 col3=col3 col4=col4 %}
 
 ---
 
@@ -20,146 +102,138 @@ Our research integrates **functional genomics, single-cell biology, and computat
 ---
 
 ## MIRACLE — Mechanistic Insights into Cardiovascular Risk (2023–2027)
+<span id="miracle"></span>
 
-A major research program focused on redefining how genetic risk contributes to cardiovascular disease.
+A major research program focused on understanding how genetic risk translates into disease mechanisms.
 
-The project integrates:
-- genome-wide association data
-- functional genomics
-- multi-omics profiling
+**Core components:**
+- GWAS integration and variant prioritization  
+- multi-omics data integration  
+- pathway-level interpretation  
 
-to identify **causal variants, regulatory mechanisms, and disease-relevant pathways** that explain individual risk and disease progression.
+**What this enables:**
+- improved risk prediction  
+- identification of disease-driving mechanisms  
 
----
-
-## SECRET — Functional Dissection of Regulatory Variants in ASCVD (ERC)
-
-This project focuses on identifying and validating **causal non-coding variants** associated with cardiovascular disease.
-
-Key approaches include:
-- CRISPR-based perturbations (CRISPRi/a)
-- vascular cell models (endothelial and smooth muscle cells)
-- gene regulatory network reconstruction
-
-The goal is to establish **direct mechanistic links between genetic variants and gene regulation in disease-relevant cell types**.
+{%
+  include button.html
+  text="Explore genetic discovery →"
+  link="#finemapping"
+%}
 
 ---
 
-## Single-Cell and Spatial Genomics of Atherosclerosis
+## SECRET — Functional Dissection of Regulatory Variants (ERC)
+<span id="secret"></span>
 
-This research direction aims to map the cellular and molecular landscape of cardiovascular disease at high resolution.
+Focused on identifying and validating **causal regulatory variants** in vascular biology.
 
-Technologies used include:
-- single-cell RNA sequencing (scRNA-seq)
-- single-cell ATAC-seq and multiome
-- spatial transcriptomics
+**Approaches:**
+- CRISPR perturbations (CRISPRi/a)  
+- endothelial and smooth muscle models  
+- regulatory network reconstruction  
 
-The objective is to identify:
+**Outcome:**
+Direct mapping of **variant → enhancer → gene → function**
+
+{%
+  include button.html
+  text="See functional genomics →"
+  link="#regulation"
+%}
+
+---
+
+## Single-Cell & Spatial Genomics
+<span id="singlecell"></span>
+
+Mapping cardiovascular disease at **cell-type and spatial resolution**.
+
+**Technologies:**
+- scRNA-seq, scATAC-seq, multiome  
+- spatial transcriptomics  
+
+**Focus:**
 - disease-associated cell states  
-- cell-type-specific regulatory programs  
-- spatial organization of pathological processes  
+- spatial organization of pathology  
+
+{%
+  include button.html
+  text="View cellular context →"
+  link="#multimodal"
+%}
 
 ---
 
 ## Functional Fine-Mapping of GWAS Variants
+<span id="finemapping"></span>
 
-A core research theme focused on translating GWAS findings into biological insight.
+Translating genetic associations into **causal mechanisms**.
 
-Methods include:
-- massively parallel reporter assays (MPRA)
-- CRISPR-based functional validation
-- integrative computational analyses
+**Methods:**
+- MPRA  
+- CRISPR validation  
+- computational fine-mapping  
 
-This work enables the identification of:
-- causal regulatory elements  
-- target genes of non-coding variants  
-- functional mechanisms underlying disease associations  
+**Goal:**
+Link non-coding variants to **target genes and regulatory function**
 
 ---
 
-## Multimodal Approaches for Translational Cardiovascular Genomics
+## Multimodal Integration & Translational Genomics
+<span id="multimodal"></span>
 
-An emerging direction that integrates diverse data modalities to improve disease understanding and prediction.
+An emerging direction integrating multiple data modalities.
 
-This includes:
-- genomics and epigenomics  
+**Data layers:**
+- genomics, epigenomics  
 - transcriptomics and spatial data  
-- computational and machine learning approaches  
+- clinical and computational models  
 
-The aim is to build **integrative models that connect molecular mechanisms to clinical phenotypes**.
+**Objective:**
+Build **mechanism-aware models** connecting biology to clinical phenotypes
 
 ---
 
 {% include section.html %}
 
-# Previous and Foundational Projects
+# Foundational Research
 
 ---
 
-## Enhancer Biology and Gene Regulation
+## Enhancer Biology & Gene Regulation
+<span id="regulation"></span>
 
-Early work in the lab focused on understanding the role of **enhancers and enhancer RNAs (eRNAs)** in regulating gene expression.
-
-This research established fundamental insights into:
-- transcriptional regulation  
-- inflammatory gene programs  
-- regulatory element function  
+Understanding how enhancers and eRNAs regulate gene expression.
 
 ---
 
 ## Genomic Dissection of Atherosclerosis
 
-Initial lab research applied next-generation sequencing technologies to study cardiovascular disease.
-
-Approaches included:
-- RNA-seq  
-- ChIP-seq  
-- chromatin interaction assays  
-
-This work laid the foundation for identifying **cell-type-specific regulatory mechanisms in disease**.
+Application of high-throughput sequencing to identify **cell-type-specific regulatory programs**.
 
 ---
 
-## Polygenic Architecture of Cardiovascular Disease
+## Polygenic Architecture of Disease
 
-This line of research investigated how genetic variation contributes to disease through specific cell types and cellular states.
-
-Key contributions include:
-- identification of disease-associated cell states  
-- linking heritability to biological context  
-- improving biological interpretation of polygenic risk  
+Linking genetic variation to **cell states and heritability**.
 
 ---
 
 ## Variant-to-Function Mapping
 
-A major focus has been the development of frameworks linking:
-genetic variants → regulatory elements → target genes
-
-This work enabled:
-- systematic interpretation of non-coding GWAS signals  
-- identification of causal mechanisms  
-- integration of genetic and functional data  
-
----
-
-## Viral Gene Therapy (Early Career)
-
-Earlier work involved the development of viral vectors for gene delivery, providing a strong foundation in molecular and translational biology.
+Frameworks connecting:
+**variants → regulatory elements → target genes**
 
 ---
 
 {% include section.html dark=true %}
 
-## Research Vision
+## Research Philosophy
 
-Our research aims to bridge the gap between **genetic association and disease mechanism** by integrating experimental and computational approaches.
+We aim to bridge:
 
-We focus on:
-
-- identifying causal variants and regulatory mechanisms  
-- understanding cell-type-specific disease processes  
-- developing integrative models for translational medicine  
+**Genetic variation → Regulatory mechanisms → Cellular context → Disease → Clinical translation**
 
 ---
 
