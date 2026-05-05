@@ -391,12 +391,7 @@ nav:
           </div>
         </div>
 
-        <div class="contact-item">
-          <div class="contact-label">Phone</div>
-          <div class="contact-value">
-            <a href="tel:+358403552413">+358 40 355 2413</a>
-          </div>
-        </div>
+
 
         <div class="contact-item">
           <div class="contact-label">Location</div>
