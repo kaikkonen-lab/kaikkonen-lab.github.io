@@ -6,83 +6,67 @@ nav:
 ---
 
 <style>
-.project-hero {
-  padding: 4.5rem 2rem;
-  border-radius: 28px;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(0, 156, 170, 0.20), transparent 30%),
-    radial-gradient(circle at 80% 10%, rgba(130, 80, 180, 0.18), transparent 35%),
-    linear-gradient(135deg, #061b3a 0%, #0b355f 55%, #123f4c 100%);
+.research-hero {
+  padding: 3.2rem 2rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #06264f 0%, #0b5570 55%, #0a3f46 100%);
   color: white;
-  margin-bottom: 3rem;
-  overflow: hidden;
-  position: relative;
+  margin: 1rem 0 2.5rem 0;
 }
 
-.project-hero h1 {
-  font-size: clamp(2.3rem, 5vw, 4.8rem);
-  line-height: 1.05;
-  margin-bottom: 1rem;
+.research-hero h1 {
+  color: white;
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+}
+
+.research-hero p {
   max-width: 900px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
 }
 
-.project-hero p {
-  font-size: 1.2rem;
-  max-width: 850px;
-  color: rgba(255,255,255,0.88);
-}
-
-.research-flow {
+.research-pathway {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 0.8rem;
-  margin: 2.5rem 0 3.5rem;
+  gap: 0.9rem;
+  margin: 2rem 0 3rem 0;
 }
 
-.flow-step {
+.pathway-item {
   background: #ffffff;
-  border: 1px solid #dfe7ef;
-  border-radius: 22px;
-  padding: 1.2rem;
+  border: 1px solid #dbe7ef;
+  border-radius: 18px;
+  padding: 1.1rem;
   text-align: center;
-  box-shadow: 0 10px 28px rgba(10, 40, 70, 0.07);
+  box-shadow: 0 8px 24px rgba(10, 40, 70, 0.08);
 }
 
-.flow-step .icon {
+.pathway-icon {
   font-size: 2rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
-.flow-step strong {
+.pathway-item strong {
   display: block;
   color: #08224a;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 
-.flow-step span {
-  color: #58708a;
-  font-size: 0.92rem;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.3rem;
-  margin: 2rem 0 3rem;
+.pathway-item span {
+  color: #5c7085;
+  font-size: 0.9rem;
 }
 
 .project-card {
-  background: #ffffff;
-  border: 1px solid #dce7f1;
-  border-radius: 26px;
+  border: 1px solid #dbe7ef;
+  border-radius: 22px;
   padding: 1.6rem;
-  box-shadow: 0 12px 35px rgba(8, 34, 74, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 45px rgba(8, 34, 74, 0.14);
+  margin: 1.4rem 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+  box-shadow: 0 10px 28px rgba(8, 34, 74, 0.07);
 }
 
 .project-card h2 {
@@ -90,41 +74,32 @@ nav:
   color: #08224a;
 }
 
-.project-tag {
+.project-label {
   display: inline-block;
-  padding: 0.25rem 0.65rem;
+  padding: 0.25rem 0.7rem;
   border-radius: 999px;
-  background: #e8f4f6;
+  background: #e6f4f4;
   color: #006d77;
   font-size: 0.82rem;
   font-weight: 700;
-  margin-bottom: 0.9rem;
-}
-
-.project-card ul {
-  padding-left: 1.1rem;
-}
-
-.project-card li {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.7rem;
 }
 
 .project-links {
   margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
 }
 
 .project-links a {
-  text-decoration: none;
-  padding: 0.55rem 0.85rem;
+  display: inline-block;
+  margin: 0.25rem 0.35rem 0.25rem 0;
+  padding: 0.5rem 0.8rem;
   border-radius: 999px;
-  border: 1px solid #c9d8e6;
+  border: 1px solid #cbdbe8;
+  background: #ffffff;
   color: #08224a;
+  text-decoration: none;
   font-weight: 700;
   font-size: 0.9rem;
-  background: #f7fbff;
 }
 
 .project-links a:hover {
@@ -132,33 +107,32 @@ nav:
   color: white;
 }
 
-.past-projects {
+.foundational-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin: 2rem 0 3rem;
+  margin: 1.5rem 0 2.5rem 0;
 }
 
-.past-card {
-  border-radius: 22px;
-  padding: 1.2rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f4f8fb 100%);
-  border: 1px solid #dfe7ef;
+.foundation-card {
+  padding: 1.3rem;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #dbe7ef;
+  box-shadow: 0 8px 22px rgba(8, 34, 74, 0.06);
 }
 
-.past-card h3 {
+.foundation-card h3 {
   margin-top: 0;
   color: #08224a;
 }
 
 .vision-box {
-  border-radius: 28px;
-  padding: 2.2rem;
+  border-radius: 24px;
+  padding: 2rem;
+  background: linear-gradient(135deg, #691737 0%, #08224a 100%);
   color: white;
-  background:
-    linear-gradient(135deg, rgba(105, 23, 55, 0.95), rgba(6, 27, 58, 0.98)),
-    radial-gradient(circle at top right, rgba(0, 180, 190, 0.35), transparent 35%);
-  margin: 3rem 0;
+  margin: 2.5rem 0;
 }
 
 .vision-box h2 {
@@ -167,266 +141,246 @@ nav:
 }
 
 .vision-path {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 800;
-  letter-spacing: 0.02em;
+  line-height: 1.8;
 }
 
 @media (max-width: 900px) {
-  .research-flow,
-  .project-grid,
-  .past-projects {
+  .research-pathway,
+  .foundational-grid {
     grid-template-columns: 1fr;
   }
 
-  .project-hero {
-    padding: 3rem 1.4rem;
+  .research-hero h1 {
+    font-size: 2.2rem;
   }
 }
 </style>
 
-<div class="project-hero">
-
-# Research Projects
-
-The Kaikkonen Lab investigates how **genetic variation shapes cardiovascular disease mechanisms** and how this knowledge can be translated into better prediction, prevention, and treatment.
-
-Our work connects **genetic discovery, functional genomics, single-cell and spatial biology, computational modelling, and translational medicine**.
-
+<div class="research-hero">
+  <h1>Research Projects</h1>
+  <p>
+    The Kaikkonen Lab investigates how genetic variation shapes cardiovascular disease mechanisms and how this knowledge can be translated into better prediction, prevention, and treatment. Our work connects genetic discovery, functional genomics, single-cell and spatial biology, computational modelling, and translational medicine.
+  </p>
 </div>
 
 ## Research at a Glance
 
-<div class="research-flow">
+<div class="research-pathway">
+  <div class="pathway-item">
+    <div class="pathway-icon">🧬</div>
+    <strong>Genetic Variation</strong>
+    <span>GWAS, loci, variants</span>
+  </div>
 
-<div class="flow-step">
-<div class="icon">🧬</div>
-<strong>Genetic variation</strong>
-<span>GWAS, loci, variants</span>
-</div>
+  <div class="pathway-item">
+    <div class="pathway-icon">🎯</div>
+    <strong>Causal Prioritization</strong>
+    <span>fine-mapping and regulatory variants</span>
+  </div>
 
-<div class="flow-step">
-<div class="icon">🎯</div>
-<strong>Causal prioritization</strong>
-<span>fine-mapping, regulatory variants</span>
-</div>
+  <div class="pathway-item">
+    <div class="pathway-icon">🔬</div>
+    <strong>Functional Mechanisms</strong>
+    <span>MPRA, CRISPR, enhancers</span>
+  </div>
 
-<div class="flow-step">
-<div class="icon">🔬</div>
-<strong>Functional mechanisms</strong>
-<span>MPRA, CRISPR, enhancers</span>
-</div>
+  <div class="pathway-item">
+    <div class="pathway-icon">🧫</div>
+    <strong>Cellular Context</strong>
+    <span>single-cell and spatial omics</span>
+  </div>
 
-<div class="flow-step">
-<div class="icon">🧫</div>
-<strong>Cellular context</strong>
-<span>single-cell and spatial omics</span>
-</div>
-
-<div class="flow-step">
-<div class="icon">❤️</div>
-<strong>Clinical translation</strong>
-<span>risk, mechanisms, therapy</span>
-</div>
-
+  <div class="pathway-item">
+    <div class="pathway-icon">❤️</div>
+    <strong>Clinical Translation</strong>
+    <span>risk, mechanisms, therapy</span>
+  </div>
 </div>
 
 ---
 
 ## Ongoing Research Programs
 
-<div class="project-grid">
-
 <div class="project-card" id="miracle">
-<span class="project-tag">Ongoing · 2023–2027</span>
+  <span class="project-label">Ongoing · 2023–2027</span>
+  <h2>MIRACLE</h2>
+  <p>
+    MIRACLE focuses on understanding how genetic risk contributes to cardiovascular disease mechanisms and disease progression.
+  </p>
 
-## MIRACLE
+  <p><strong>Scientific focus:</strong></p>
+  <ul>
+    <li>genetic risk interpretation</li>
+    <li>causal variant discovery</li>
+    <li>multi-omics integration</li>
+    <li>pathway-level mechanisms</li>
+    <li>cardiovascular risk prediction</li>
+  </ul>
 
-MIRACLE focuses on understanding how genetic risk contributes to cardiovascular disease mechanisms and disease progression.
-
-**Scientific focus**
-
-- genetic risk interpretation  
-- causal variant discovery  
-- multi-omics integration  
-- pathway-level mechanisms  
-- cardiovascular risk prediction  
-
-<div class="project-links">
-<a href="https://uefconnect.uef.fi/en/minna.kaikkonen-maatta/" target="_blank">Minna’s UEF profile</a>
-<a href="#finemapping">Fine-mapping</a>
-<a href="#multimodal">Translation</a>
-</div>
-
+  <div class="project-links">
+    <a href="https://uefconnect.uef.fi/en/minna.kaikkonen-maatta/" target="_blank">Minna’s UEF profile</a>
+    <a href="#finemapping">Fine-mapping</a>
+    <a href="#multimodal">Translation</a>
+  </div>
 </div>
 
 <div class="project-card" id="secret">
-<span class="project-tag">ERC project</span>
+  <span class="project-label">ERC project</span>
+  <h2>SECRET</h2>
+  <p>
+    SECRET aims to functionally dissect causal regulatory variants in atherosclerotic cardiovascular disease.
+  </p>
 
-## SECRET
+  <p><strong>Scientific focus:</strong></p>
+  <ul>
+    <li>non-coding disease variants</li>
+    <li>CRISPRi and CRISPRa perturbations</li>
+    <li>endothelial and smooth muscle cell models</li>
+    <li>enhancer-to-gene regulation</li>
+    <li>disease-relevant regulatory networks</li>
+  </ul>
 
-SECRET aims to functionally dissect causal regulatory variants in atherosclerotic cardiovascular disease.
-
-**Scientific focus**
-
-- non-coding disease variants  
-- CRISPRi and CRISPRa perturbations  
-- endothelial and smooth muscle cell models  
-- enhancer-to-gene regulation  
-- disease-relevant regulatory networks  
-
-<div class="project-links">
-<a href="https://uefconnect.uef.fi/en/cardiovascular-genomics-kaikkonen-lab/" target="_blank">Lab research profile</a>
-<a href="#regulation">Gene regulation</a>
-<a href="#singlecell">Cellular context</a>
-</div>
-
+  <div class="project-links">
+    <a href="https://uefconnect.uef.fi/en/cardiovascular-genomics-kaikkonen-lab/" target="_blank">Lab research profile</a>
+    <a href="#regulation">Gene regulation</a>
+    <a href="#singlecell">Cellular context</a>
+  </div>
 </div>
 
 <div class="project-card" id="singlecell">
-<span class="project-tag">Single-cell · Spatial biology</span>
+  <span class="project-label">Single-cell · Spatial biology</span>
+  <h2>Single-Cell and Spatial Genomics</h2>
+  <p>
+    This research direction maps cardiovascular disease at cell-type and spatial resolution.
+  </p>
 
-## Single-Cell and Spatial Genomics
+  <p><strong>Scientific focus:</strong></p>
+  <ul>
+    <li>single-cell RNA-seq</li>
+    <li>single-cell ATAC-seq and multiome</li>
+    <li>spatial transcriptomics</li>
+    <li>disease-associated cell states</li>
+    <li>spatial organization of vascular pathology</li>
+  </ul>
 
-This research direction maps cardiovascular disease at cell-type and spatial resolution.
-
-**Scientific focus**
-
-- single-cell RNA-seq  
-- single-cell ATAC-seq and multiome  
-- spatial transcriptomics  
-- disease-associated cell states  
-- spatial organization of vascular pathology  
-
-<div class="project-links">
-<a href="https://uefconnect.uef.fi/en/cardiovascular-genomics-kaikkonen-lab/" target="_blank">Research group</a>
-<a href="#multimodal">Multimodal integration</a>
-</div>
-
+  <div class="project-links">
+    <a href="https://uefconnect.uef.fi/en/cardiovascular-genomics-kaikkonen-lab/" target="_blank">Research group</a>
+    <a href="#multimodal">Multimodal integration</a>
+  </div>
 </div>
 
 <div class="project-card" id="finemapping">
-<span class="project-tag">Variant-to-function</span>
+  <span class="project-label">Variant-to-function</span>
+  <h2>Functional Fine-Mapping of GWAS Variants</h2>
+  <p>
+    This project area translates statistical disease associations into experimentally testable biological mechanisms.
+  </p>
 
-## Functional Fine-Mapping of GWAS Variants
+  <p><strong>Scientific focus:</strong></p>
+  <ul>
+    <li>GWAS locus interpretation</li>
+    <li>causal variant prioritization</li>
+    <li>MPRA-based enhancer testing</li>
+    <li>CRISPR-based validation</li>
+    <li>target gene mapping</li>
+  </ul>
 
-This project area translates statistical disease associations into experimentally testable biological mechanisms.
-
-**Scientific focus**
-
-- GWAS locus interpretation  
-- causal variant prioritization  
-- MPRA-based enhancer testing  
-- CRISPR-based validation  
-- target gene mapping  
-
-<div class="project-links">
-<a href="#secret">SECRET</a>
-<a href="#regulation">Enhancer biology</a>
-<a href="#miracle">MIRACLE</a>
-</div>
-
+  <div class="project-links">
+    <a href="#secret">SECRET</a>
+    <a href="#regulation">Enhancer biology</a>
+    <a href="#miracle">MIRACLE</a>
+  </div>
 </div>
 
 <div class="project-card" id="multimodal">
-<span class="project-tag">Computational · Translational</span>
+  <span class="project-label">Computational · Translational</span>
+  <h2>Multimodal Approaches for Translational Cardiovascular Genomics</h2>
+  <p>
+    This emerging direction integrates molecular, cellular, spatial, genetic, and clinical data to connect mechanism with phenotype.
+  </p>
 
-## Multimodal Approaches for Translational Cardiovascular Genomics
+  <p><strong>Scientific focus:</strong></p>
+  <ul>
+    <li>genomics and epigenomics</li>
+    <li>transcriptomics and spatial data</li>
+    <li>clinical data integration</li>
+    <li>machine learning and computational modelling</li>
+    <li>mechanism-aware prediction</li>
+  </ul>
 
-This emerging direction integrates molecular, cellular, spatial, genetic, and clinical data to connect mechanism with phenotype.
-
-**Scientific focus**
-
-- genomics and epigenomics  
-- transcriptomics and spatial data  
-- clinical data integration  
-- machine learning and computational modelling  
-- mechanism-aware prediction  
-
-<div class="project-links">
-<a href="https://uefconnect.uef.fi/en/minna.kaikkonen-maatta/" target="_blank">UEF profile</a>
-<a href="#singlecell">Single-cell data</a>
-<a href="#miracle">Risk prediction</a>
-</div>
-
+  <div class="project-links">
+    <a href="https://uefconnect.uef.fi/en/minna.kaikkonen-maatta/" target="_blank">UEF profile</a>
+    <a href="#singlecell">Single-cell data</a>
+    <a href="#miracle">Risk prediction</a>
+  </div>
 </div>
 
 <div class="project-card" id="regulation">
-<span class="project-tag">Core biology</span>
+  <span class="project-label">Core biology</span>
+  <h2>Gene Regulatory Mechanisms in Cardiovascular Disease</h2>
+  <p>
+    A central goal of the lab is to understand how regulatory elements, enhancers, and transcriptional programs control disease-relevant cellular phenotypes.
+  </p>
 
-## Gene Regulatory Mechanisms in Cardiovascular Disease
+  <p><strong>Scientific focus:</strong></p>
+  <ul>
+    <li>enhancer function</li>
+    <li>enhancer RNAs</li>
+    <li>chromatin regulation</li>
+    <li>inflammatory gene programs</li>
+    <li>variant-to-gene mechanisms</li>
+  </ul>
 
-A central goal of the lab is to understand how regulatory elements, enhancers, and transcriptional programs control disease-relevant cellular phenotypes.
-
-**Scientific focus**
-
-- enhancer function  
-- enhancer RNAs  
-- chromatin regulation  
-- inflammatory gene programs  
-- variant-to-gene mechanisms  
-
-<div class="project-links">
-<a href="#secret">Regulatory variants</a>
-<a href="#finemapping">Variant-to-function</a>
-</div>
-
-</div>
-
+  <div class="project-links">
+    <a href="#secret">Regulatory variants</a>
+    <a href="#finemapping">Variant-to-function</a>
+  </div>
 </div>
 
 ---
 
 ## Previous and Foundational Research
 
-<div class="past-projects">
+<div class="foundational-grid">
+  <div class="foundation-card">
+    <h3>Enhancer Biology</h3>
+    <p>
+      Foundational work on enhancers and enhancer RNAs in transcriptional regulation and inflammatory gene expression.
+    </p>
+  </div>
 
-<div class="past-card">
+  <div class="foundation-card">
+    <h3>Genomic Dissection of Atherosclerosis</h3>
+    <p>
+      Application of next-generation sequencing technologies to identify regulatory mechanisms in cardiovascular disease.
+    </p>
+  </div>
 
-### Enhancer Biology
+  <div class="foundation-card">
+    <h3>Polygenic Disease Architecture</h3>
+    <p>
+      Research linking genetic variation, disease-associated cell states, and heritability in cardiovascular disease.
+    </p>
+  </div>
 
-Foundational work on enhancers and enhancer RNAs in transcriptional regulation and inflammatory gene expression.
-
-</div>
-
-<div class="past-card">
-
-### Genomic Dissection of Atherosclerosis
-
-Application of next-generation sequencing technologies to identify regulatory mechanisms in cardiovascular disease.
-
-</div>
-
-<div class="past-card">
-
-### Polygenic Disease Architecture
-
-Research linking genetic variation, disease-associated cell states, and heritability in cardiovascular disease.
-
-</div>
-
-<div class="past-card">
-
-### Variant-to-Function Mapping
-
-Development of frameworks connecting non-coding variants to regulatory elements, target genes, and disease mechanisms.
-
-</div>
-
+  <div class="foundation-card">
+    <h3>Variant-to-Function Mapping</h3>
+    <p>
+      Development of frameworks connecting non-coding variants to regulatory elements, target genes, and disease mechanisms.
+    </p>
+  </div>
 </div>
 
 <div class="vision-box">
-
-## Research Vision
-
-<div class="vision-path">
-Genetic variation → Regulatory function → Cellular mechanisms → Disease biology → Clinical translation
-</div>
-
-<br>
-
-The long-term goal of our research is to bridge the gap between genetic association and disease mechanism by combining experimental genomics, single-cell technologies, computational biology, and translational cardiovascular research.
-
+  <h2>Research Vision</h2>
+  <div class="vision-path">
+    Genetic variation → Regulatory function → Cellular mechanisms → Disease biology → Clinical translation
+  </div>
+  <p>
+    The long-term goal of our research is to bridge the gap between genetic association and disease mechanism by combining experimental genomics, single-cell technologies, computational biology, and translational cardiovascular research.
+  </p>
 </div>
 
 ---
