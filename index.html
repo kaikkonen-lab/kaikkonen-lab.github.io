@@ -468,47 +468,74 @@
   --soft: #f7fbfd;
 }
 
-.home-hero {
+.home-pathway {
   position: relative;
   overflow: hidden;
+  padding: 3.2rem 2rem;
   border-radius: 34px;
-  padding: 4.8rem 2.4rem;
-  color: white;
   background:
-    radial-gradient(circle at 15% 20%, rgba(0, 210, 190, 0.33), transparent 28%),
-    radial-gradient(circle at 85% 10%, rgba(180, 60, 120, 0.28), transparent 30%),
+    radial-gradient(circle at 14% 18%, rgba(0, 210, 190, 0.30), transparent 28%),
+    radial-gradient(circle at 86% 12%, rgba(180, 60, 120, 0.25), transparent 30%),
     linear-gradient(135deg, #061b3a 0%, #083e67 52%, #0a6265 100%);
+  color: white;
   margin: 1rem 0 3rem;
 }
 
-.home-hero::after {
+.home-pathway::before {
   content: "";
   position: absolute;
-  right: -130px;
-  bottom: -150px;
-  width: 440px;
-  height: 440px;
+  inset: -80px;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.10) 45%, transparent 70%);
+  transform: translateX(-70%);
+  animation: shimmer 7s infinite;
+}
+
+.home-pathway::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  bottom: -140px;
+  width: 420px;
+  height: 420px;
   border-radius: 50%;
   border: 36px solid rgba(255,255,255,0.08);
 }
 
-.home-hero h1 {
+@keyframes shimmer {
+  0% { transform: translateX(-70%); }
+  45% { transform: translateX(70%); }
+  100% { transform: translateX(70%); }
+}
+
+.home-kicker {
+  position: relative;
+  z-index: 1;
+  color: #70fff2;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: .82rem;
+}
+
+.home-heading {
   position: relative;
   z-index: 1;
   color: white;
+  font-size: clamp(2.3rem, 5vw, 4.7rem);
+  line-height: 1.04;
   max-width: 980px;
-  font-size: clamp(2.5rem, 5vw, 5.2rem);
-  line-height: 1.02;
-  margin: 0 0 1.2rem;
+  margin: .4rem 0 1rem;
 }
 
-.home-hero p {
+.home-lead {
   position: relative;
   z-index: 1;
-  max-width: 900px;
-  font-size: 1.22rem;
+  max-width: 930px;
+  font-size: 1.18rem;
   line-height: 1.75;
   color: rgba(255,255,255,0.92);
+  margin-bottom: 1.5rem;
 }
 
 .home-actions {
@@ -517,7 +544,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: .8rem;
-  margin-top: 1.8rem;
+  margin: 1.4rem 0 2rem;
 }
 
 .home-actions a {
@@ -528,142 +555,83 @@
   padding: .7rem 1rem;
   border-radius: 999px;
   font-weight: 800;
+  transition: all .25s ease;
 }
 
 .home-actions a:hover {
   background: white;
   color: var(--navy);
+  transform: translateY(-3px);
 }
 
-.home-kicker {
+.pathway-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: .9rem;
+  margin-top: 1.4rem;
+}
+
+.pathway-step {
+  position: relative;
+  text-align: center;
+  padding: 1.15rem .9rem;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.24);
+  backdrop-filter: blur(8px);
+  transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+.pathway-step:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255,255,255,0.20);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+.pathway-step .icon {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  animation: floatIcon 4s ease-in-out infinite;
+}
+
+.pathway-step:nth-child(2) .icon { animation-delay: .4s; }
+.pathway-step:nth-child(3) .icon { animation-delay: .8s; }
+.pathway-step:nth-child(4) .icon { animation-delay: 1.2s; }
+.pathway-step:nth-child(5) .icon { animation-delay: 1.6s; }
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.pathway-step strong {
+  display: block;
+  color: white;
+  margin-bottom: .35rem;
+}
+
+.pathway-step span {
+  display: block;
+  color: rgba(255,255,255,0.80);
+  font-size: .9rem;
+  line-height: 1.4;
+}
+
+.page-heading {
+  color: var(--navy);
+  font-size: 2.15rem;
+  margin: .35rem 0 1rem;
+}
+
+.page-kicker {
   color: var(--teal);
   font-weight: 900;
   letter-spacing: .08em;
   text-transform: uppercase;
   font-size: .82rem;
   margin-top: 2.5rem;
-}
-
-.home-heading {
-  color: var(--navy);
-  font-size: 2.25rem;
-  margin: .35rem 0 1rem;
-}
-
-.focus-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.1rem;
-  margin: 1.5rem 0 3rem;
-}
-
-.focus-card {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 26px;
-  padding: 1.5rem;
-  box-shadow: 0 12px 30px rgba(6, 38, 79, 0.08);
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.focus-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 42px rgba(6, 38, 79, 0.14);
-}
-
-.focus-icon {
-  display: inline-flex;
-  width: 54px;
-  height: 54px;
-  border-radius: 18px;
-  align-items: center;
-  justify-content: center;
-  background: #e9f7f6;
-  font-size: 1.8rem;
-  margin-bottom: .8rem;
-}
-
-.focus-card h3 {
-  color: var(--navy);
-  margin: .2rem 0 .5rem;
-}
-
-.focus-card p {
-  color: var(--muted);
-  line-height: 1.65;
-}
-
-.home-pathway {
-  padding: 2rem;
-  border-radius: 30px;
-  background: linear-gradient(180deg, #ffffff, #f7fbfd);
-  border: 1px solid var(--line);
-  box-shadow: 0 14px 34px rgba(6, 38, 79, 0.07);
-  margin: 2rem 0 3rem;
-}
-
-.pathway-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: .9rem;
-  margin-top: 1rem;
-}
-
-.pathway-step {
-  text-align: center;
-  padding: 1rem;
-  border-radius: 20px;
-  background: white;
-  border: 1px solid var(--line);
-}
-
-.pathway-step .icon {
-  font-size: 2rem;
-  margin-bottom: .5rem;
-}
-
-.pathway-step strong {
-  display: block;
-  color: var(--navy);
-  margin-bottom: .3rem;
-}
-
-.pathway-step span {
-  display: block;
-  color: var(--muted);
-  font-size: .9rem;
-  line-height: 1.4;
-}
-
-.quote-panel {
-  padding: 2.2rem;
-  border-radius: 30px;
-  color: white;
-  background:
-    radial-gradient(circle at 85% 20%, rgba(0, 200, 190, .30), transparent 32%),
-    linear-gradient(135deg, #68153d, #061b3a 72%);
-  margin: 3rem 0;
-}
-
-.quote-panel blockquote {
-  margin: 0;
-  border-left: 0;
-  padding: 0;
-}
-
-.quote-panel p {
-  color: rgba(255,255,255,.93);
-  font-size: 1.25rem;
-  line-height: 1.7;
-  margin: 0;
-}
-
-.quote-panel cite {
-  display: block;
-  margin-top: 1rem;
-  color: rgba(255,255,255,.75);
-  font-style: normal;
-  font-weight: 700;
 }
 
 .gateway-grid {
@@ -681,6 +649,12 @@
   border: 1px solid var(--line);
   background: white;
   box-shadow: 0 14px 34px rgba(6, 38, 79, 0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.gateway-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 22px 46px rgba(6, 38, 79, 0.15);
 }
 
 .gateway-card img {
@@ -688,6 +662,11 @@
   height: 150px;
   object-fit: cover;
   display: block;
+  transition: transform .45s ease;
+}
+
+.gateway-card:hover img {
+  transform: scale(1.06);
 }
 
 .gateway-content {
@@ -716,26 +695,58 @@
   color: var(--teal);
 }
 
+.quote-panel {
+  padding: 2.2rem;
+  border-radius: 30px;
+  color: white;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(0, 200, 190, .30), transparent 32%),
+    linear-gradient(135deg, #68153d, #061b3a 72%);
+  margin: 3rem 0;
+}
+
+.quote-panel blockquote {
+  margin: 0;
+  border-left: 0;
+  padding: 0;
+}
+
+.quote-panel p {
+  color: rgba(255,255,255,.93);
+  font-size: 1.22rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.quote-panel cite {
+  display: block;
+  margin-top: 1rem;
+  color: rgba(255,255,255,.75);
+  font-style: normal;
+  font-weight: 700;
+}
+
 @media (max-width: 950px) {
-  .focus-grid,
   .pathway-grid,
   .gateway-grid {
     grid-template-columns: 1fr;
   }
 
-  .home-hero {
-    padding: 3.3rem 1.5rem;
+  .home-pathway {
+    padding: 2.6rem 1.4rem;
   }
 }
 </style>
 
 <div class="home-page">
 
-<section class="home-hero">
-  <h1>Decoding cardiovascular disease through regulatory genomics</h1>
+<section class="home-pathway">
+  <div class="home-kicker">Discovery pipeline</div>
 
-  <p>
-    The Kaikkonen Lab investigates how genetic and epigenomic regulatory mechanisms shape atherosclerotic cardiovascular disease and cardiometabolic risk. We combine cellular and genetic model systems, single-cell transcriptomics, epigenomics, high-throughput functional genomics, and computational biology to uncover disease-relevant regulatory mechanisms.
+  <div class="home-heading">A connected path from genetics to cardiovascular translation</div>
+
+  <p class="home-lead">
+    The Kaikkonen Lab investigates how genetic and epigenomic regulatory mechanisms shape atherosclerotic cardiovascular disease and cardiometabolic risk. We connect disease-associated genetic variation to regulatory mechanisms, cellular states, and biological function using functional genomics, single-cell technologies, multi-omics, and computational biology.
   </p>
 
   <div class="home-actions">
@@ -743,34 +754,6 @@
     <a href="projects/">View projects</a>
     <a href="team/">Meet the team</a>
   </div>
-</section>
-
-<div class="home-kicker">Research focus</div>
-<div class="home-heading">From variants to mechanisms</div>
-
-<div class="focus-grid">
-  <div class="focus-card">
-    <span class="focus-icon">🧬</span>
-    <h3>Functional genomics</h3>
-    <p>Mapping regulatory variants, enhancers, and non-coding mechanisms linked to cardiovascular disease.</p>
-  </div>
-
-  <div class="focus-card">
-    <span class="focus-icon">❤️</span>
-    <h3>Cardiovascular biology</h3>
-    <p>Studying vascular, immune, and disease-relevant cellular programs that contribute to atherosclerosis.</p>
-  </div>
-
-  <div class="focus-card">
-    <span class="focus-icon">📊</span>
-    <h3>Computational multi-omics</h3>
-    <p>Integrating genetic, epigenomic, single-cell, spatial, and functional data to interpret disease risk.</p>
-  </div>
-</div>
-
-<section class="home-pathway">
-  <div class="home-kicker">Discovery pipeline</div>
-  <div class="home-heading">A connected path from genetics to translation</div>
 
   <div class="pathway-grid">
     <div class="pathway-step">
@@ -805,15 +788,8 @@
   </div>
 </section>
 
-<section class="quote-panel">
-  <blockquote>
-    <p>“Science and everyday life cannot and should not be separated.”</p>
-    <cite>— Rosalind Franklin</cite>
-  </blockquote>
-</section>
-
-<div class="home-kicker">Explore</div>
-<div class="home-heading">Learn more about our work</div>
+<div class="page-kicker">Explore</div>
+<div class="page-heading">Learn more about our work</div>
 
 <div class="gateway-grid">
   <div class="gateway-card">
@@ -843,6 +819,13 @@
     </div>
   </div>
 </div>
+
+<section class="quote-panel">
+  <blockquote>
+    <p>“Science and everyday life cannot and should not be separated.”</p>
+    <cite>— Rosalind Franklin</cite>
+  </blockquote>
+</section>
 
 </div>
   </section>
