@@ -57,7 +57,7 @@ We study cardiovascular disease mechanisms through functional genomics, gene reg
 
 {%
   include feature.html
-  image="images/publications.jpg"
+  image="images/research_logo.jpg"
   link="research"
   title="Research"
   text=text
@@ -79,7 +79,7 @@ Our projects integrate experimental models, genomics technologies, computational
 
 {%
   include feature.html
-  image="images/research_logo.png"
+  image="images/projects.png"
   link="projects"
   title="Projects"
   flip=true
