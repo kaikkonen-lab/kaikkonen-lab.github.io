@@ -314,46 +314,11 @@ nav:
     </div>
   </div>
 
-  <div class="team-orbit">
-    <div class="team-ring"></div>
-    <div class="team-ring two"></div>
-    <div class="team-center">👥</div>
-    <div class="team-node n1">🧬</div>
-    <div class="team-node n2">🔬</div>
-    <div class="team-node n3">🧫</div>
-    <div class="team-node n4">📊</div>
-    <div class="team-node n5">❤️</div>
-  </div>
+ 
 </section>
 
-<div class="section-kicker">How we work</div>
-<div class="section-title">An interdisciplinary research culture</div>
 
-<div class="team-values">
-  <div class="value-card">
-    <div class="icon">🧬</div>
-    <strong>Genomics</strong>
-    <span>From disease-associated variants to functional mechanisms.</span>
-  </div>
-
-  <div class="value-card">
-    <div class="icon">🔬</div>
-    <strong>Experimental biology</strong>
-    <span>Cellular models, perturbation assays, and mechanistic validation.</span>
-  </div>
-
-  <div class="value-card">
-    <div class="icon">🧫</div>
-    <strong>Single-cell biology</strong>
-    <span>Cell states, tissue context, and disease progression.</span>
-  </div>
-
-  <div class="value-card">
-    <div class="icon">📊</div>
-    <strong>Computation</strong>
-    <span>Data integration, interpretation, and disease-focused modelling.</span>
-  </div>
-</div>
+  
 
 <div id="current-members" class="section-kicker">Current lab members</div>
 <div class="section-title">Meet the team</div>
