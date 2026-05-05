@@ -160,41 +160,113 @@ title: Home
   margin: .3rem 0 1rem;
 }
 
+/* Full-width discovery pipeline block */
+.discovery-full {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  padding: 3.6rem 2rem;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(0, 210, 190, 0.30), transparent 28%),
+    radial-gradient(circle at 86% 12%, rgba(180, 60, 120, 0.25), transparent 30%),
+    linear-gradient(135deg, #061b3a 0%, #083e67 52%, #0a6265 100%);
+  color: white;
+}
+
+.discovery-full::before {
+  content: "";
+  position: absolute;
+  inset: -80px;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.10) 45%, transparent 70%);
+  transform: translateX(-70%);
+  animation: discoveryShimmer 7s infinite;
+}
+
+.discovery-full::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  bottom: -140px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 36px solid rgba(255,255,255,0.08);
+}
+
+@keyframes discoveryShimmer {
+  0% { transform: translateX(-70%); }
+  45% { transform: translateX(70%); }
+  100% { transform: translateX(70%); }
+}
+
+.discovery-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.discovery-full .section-kicker {
+  color: #70fff2;
+  margin-top: 0;
+}
+
+.discovery-full .section-title {
+  color: white;
+  max-width: 900px;
+}
+
 .discovery-strip {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: .9rem;
-  margin: 1.4rem 0 3rem;
+  margin: 1.6rem 0 0;
 }
 
 .discovery-step {
-  background: white;
-  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.24);
+  backdrop-filter: blur(8px);
   border-radius: 24px;
   padding: 1.2rem 1rem;
   text-align: center;
-  box-shadow: 0 10px 26px rgba(6, 38, 79, 0.07);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
   transition: all .25s ease;
 }
 
 .discovery-step:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 18px 38px rgba(6, 38, 79, 0.13);
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255,255,255,0.20);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.18);
 }
 
 .discovery-step .icon {
   font-size: 2rem;
   margin-bottom: .45rem;
+  animation: floatNode 4s ease-in-out infinite;
 }
+
+.discovery-step:nth-child(2) .icon { animation-delay: .4s; }
+.discovery-step:nth-child(3) .icon { animation-delay: .8s; }
+.discovery-step:nth-child(4) .icon { animation-delay: 1.2s; }
+.discovery-step:nth-child(5) .icon { animation-delay: 1.6s; }
 
 .discovery-step strong {
   display: block;
-  color: var(--navy);
+  color: white;
   margin-bottom: .3rem;
 }
 
 .discovery-step span {
-  color: var(--muted);
+  color: rgba(255,255,255,0.82);
   font-size: .9rem;
   line-height: 1.45;
 }
@@ -224,6 +296,7 @@ title: Home
   width: 100%;
   height: 155px;
   object-fit: cover;
+  object-position: center;
   display: block;
   transition: transform .45s ease;
 }
@@ -283,6 +356,37 @@ title: Home
   font-weight: 700;
 }
 
+/* Header image crop: removes visual excess from top and bottom */
+header img,
+.header img,
+.banner img,
+.hero img,
+header picture img,
+.header picture img,
+.banner picture img,
+.hero picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* More specific crop for common lab-website-template header images */
+header,
+.header,
+.banner,
+.hero {
+  overflow: hidden;
+}
+
+header img,
+.header img,
+.banner img,
+.hero img {
+  transform: scale(1.10);
+  transform-origin: center center;
+}
+
 @media (max-width: 950px) {
   .home-open,
   .discovery-strip,
@@ -296,6 +400,10 @@ title: Home
 
   .orbit-heart {
     inset: 105px;
+  }
+
+  .discovery-full {
+    padding: 3rem 1.2rem;
   }
 }
 </style>
@@ -329,40 +437,44 @@ title: Home
   </div>
 </section>
 
-<div class="section-kicker">Discovery pipeline</div>
-<div class="section-title">A connected path from genetics to cardiovascular translation</div>
+<section class="discovery-full">
+  <div class="discovery-inner">
+    <div class="section-kicker">Discovery pipeline</div>
+    <div class="section-title">A connected path from genetics to cardiovascular translation</div>
 
-<div class="discovery-strip">
-  <div class="discovery-step">
-    <div class="icon">🧬</div>
-    <strong>Genetic risk</strong>
-    <span>GWAS loci and disease-associated variants</span>
-  </div>
+    <div class="discovery-strip">
+      <div class="discovery-step">
+        <div class="icon">🧬</div>
+        <strong>Genetic risk</strong>
+        <span>GWAS loci and disease-associated variants</span>
+      </div>
 
-  <div class="discovery-step">
-    <div class="icon">🎯</div>
-    <strong>Prioritization</strong>
-    <span>Causal regulatory variant discovery</span>
-  </div>
+      <div class="discovery-step">
+        <div class="icon">🎯</div>
+        <strong>Prioritization</strong>
+        <span>Causal regulatory variant discovery</span>
+      </div>
 
-  <div class="discovery-step">
-    <div class="icon">🔬</div>
-    <strong>Validation</strong>
-    <span>MPRA, CRISPR, and cellular models</span>
-  </div>
+      <div class="discovery-step">
+        <div class="icon">🔬</div>
+        <strong>Validation</strong>
+        <span>MPRA, CRISPR, and cellular models</span>
+      </div>
 
-  <div class="discovery-step">
-    <div class="icon">🧫</div>
-    <strong>Cell states</strong>
-    <span>Single-cell and spatial disease biology</span>
-  </div>
+      <div class="discovery-step">
+        <div class="icon">🧫</div>
+        <strong>Cell states</strong>
+        <span>Single-cell and spatial disease biology</span>
+      </div>
 
-  <div class="discovery-step">
-    <div class="icon">🫀</div>
-    <strong>Translation</strong>
-    <span>Mechanisms, prediction, and therapeutic insight</span>
+      <div class="discovery-step">
+        <div class="icon">🫀</div>
+        <strong>Translation</strong>
+        <span>Mechanisms, prediction, and therapeutic insight</span>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 <div class="section-kicker">Explore</div>
 <div class="section-title">Learn more about our work</div>
