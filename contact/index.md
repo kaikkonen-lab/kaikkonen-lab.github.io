@@ -5,50 +5,59 @@ nav:
   tooltip: Email, address, and location
 ---
 
-# {% include icon.html icon="fa-regular fa-envelope" %}Contact
+# {% include icon.html icon="fa-regular fa-envelope" %} Contact
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+The Cardiovascular Genomics — Kaikkonen Lab is based at the A. I. Virtanen Institute for Molecular Sciences, University of Eastern Finland, Kuopio campus.
+
+For research collaborations, student enquiries, and questions about joining the group, please contact Professor Minna Kaikkonen-Määttä.
 
 {%
   include button.html
   type="email"
-  text="jane@smith.com"
-  link="jane@smith.com"
+  text="minna.kaikkonen@uef.fi"
+  link="mailto:minna.kaikkonen@uef.fi"
 %}
 {%
   include button.html
   type="phone"
-  text="(555) 867-5309"
-  link="+1-555-867-5309"
+  text="+358 40 355 2413"
+  link="tel:+358403552413"
 %}
 {%
   include button.html
   type="address"
-  tooltip="Our location on Google Maps for easy navigation"
-  link="https://www.google.com/maps"
+  text="Kuopio campus, University of Eastern Finland"
+  tooltip="Open the Kuopio campus location in Google Maps"
+  link="https://www.google.com/maps/search/?api=1&query=University%20of%20Eastern%20Finland%20A.%20I.%20Virtanen%20Institute%20Kuopio"
 %}
 
 {% include section.html %}
 
+## Visit us
+
 {% capture col1 %}
 
-{%
-  include figure.html
-  image="images/photo.jpg"
-  caption="Lorem ipsum"
-%}
+### Address
+
+**Cardiovascular Genomics — Kaikkonen Lab**  
+A. I. Virtanen Institute for Molecular Sciences  
+University of Eastern Finland  
+P. O. Box 1627  
+FI-70211 Kuopio  
+Finland
 
 {% endcapture %}
 
 {% capture col2 %}
 
-{%
-  include figure.html
-  image="images/photo.jpg"
-  caption="Lorem ipsum"
-%}
+### Principal Investigator
+
+**Professor Minna Kaikkonen-Määttä**  
+Professor of Cardiovascular Genomics  
+Deputy Head of Department  
+Director, Single Cell Genomics Core  
+A. I. Virtanen Institute for Molecular Sciences  
+University of Eastern Finland
 
 {% endcapture %}
 
@@ -57,21 +66,27 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 {% include section.html dark=true %}
 
 {% capture col1 %}
-Lorem ipsum dolor sit amet  
-consectetur adipiscing elit  
-sed do eiusmod tempor
+
+### Research focus
+
+We investigate the mechanistic basis of atherosclerotic cardiovascular disease and cardiometabolic disease using cellular and genetic model systems, single-cell transcriptomics, epigenetics, high-throughput functional genomics, and bioinformatics.
+
 {% endcapture %}
 
 {% capture col2 %}
-Lorem ipsum dolor sit amet  
-consectetur adipiscing elit  
-sed do eiusmod tempor
+
+### Collaborations
+
+We welcome enquiries related to cardiovascular genomics, functional fine-mapping of disease-associated variants, single-cell multiomics, spatial transcriptomics, and gene-regulatory mechanisms in disease.
+
 {% endcapture %}
 
 {% capture col3 %}
-Lorem ipsum dolor sit amet  
-consectetur adipiscing elit  
-sed do eiusmod tempor
+
+### Joining the lab
+
+Prospective students and researchers are encouraged to email Minna with a short description of their research interests, background, and potential fit with the group.
+
 {% endcapture %}
 
 {% include cols.html col1=col1 col2=col2 col3=col3 %}
