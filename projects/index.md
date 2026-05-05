@@ -7,593 +7,833 @@ nav:
 
 <style>
 .projects-page {
-  --navy: #06264f;
-  --blue: #0b5f7a;
-  --teal: #00a6a6;
-  --mint: #e9f7f6;
-  --berry: #7b1e4a;
+  --navy: #071d35;
+  --deep: #061625;
+  --blue: #0c4d68;
+  --teal: #0fa6a6;
+  --berry: #8f2048;
   --ink: #102033;
-  --muted: #5f7185;
-  --line: #dce8ef;
-  --soft: #f7fbfd;
+  --muted: #617487;
+  --line: rgba(7, 29, 53, 0.12);
+  --soft: #f5f8fb;
+  --paper: #ffffff;
+
+  color: var(--ink);
 }
 
 .projects-hero {
-  position: relative;
-  overflow: hidden;
-  padding: 4.5rem 2.2rem;
-  border-radius: 32px;
-  color: white;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(0, 210, 190, 0.35), transparent 26%),
-    radial-gradient(circle at 85% 15%, rgba(180, 60, 120, 0.30), transparent 28%),
-    linear-gradient(135deg, #061a3a 0%, #083e67 48%, #0b5f62 100%);
-  margin: 1rem 0 3rem;
+  width: min(1180px, calc(100% - 44px));
+  margin: 64px auto 84px;
 }
 
-.projects-hero::after {
-  content: "";
-  position: absolute;
-  right: -120px;
-  bottom: -140px;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  border: 34px solid rgba(255,255,255,0.08);
+.projects-kicker,
+.section-kicker,
+.card-kicker {
+  margin: 0 0 16px;
+  color: var(--berry);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .projects-hero h1 {
-  position: relative;
-  z-index: 1;
-  color: white;
-  font-size: clamp(2.4rem, 5vw, 5rem);
-  line-height: 1.02;
-  max-width: 920px;
-  margin: 0 0 1.2rem;
+  max-width: 1040px;
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(2.8rem, 6vw, 6.3rem);
+  line-height: 0.92;
+  letter-spacing: -0.075em;
+  font-weight: 950;
 }
 
-.projects-hero p {
-  position: relative;
-  z-index: 1;
-  max-width: 880px;
-  font-size: 1.2rem;
+.projects-hero h1 span {
+  display: block;
+  color: var(--teal);
+}
+
+.projects-hero .lead {
+  max-width: 850px;
+  margin: 30px 0 0;
+  color: rgba(16, 32, 51, 0.78);
+  font-size: clamp(1.05rem, 1.35vw, 1.24rem);
   line-height: 1.75;
-  color: rgba(255,255,255,0.92);
 }
 
 .hero-pills {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-wrap: wrap;
-  gap: .7rem;
-  margin-top: 1.6rem;
+  gap: 10px;
+  margin-top: 34px;
 }
 
 .hero-pills a {
-  color: white;
-  text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.35);
-  background: rgba(255,255,255,0.12);
-  padding: .55rem .9rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 16px;
   border-radius: 999px;
-  font-weight: 700;
+  color: var(--navy);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  text-decoration: none;
+  font-weight: 800;
+  transition: all 0.2s ease;
 }
 
 .hero-pills a:hover {
-  background: white;
+  color: #ffffff;
+  background: var(--navy);
+  transform: translateY(-2px);
+}
+
+.logic-section,
+.projects-section,
+.foundation-section,
+.vision-section,
+.bottom-actions {
+  width: min(1180px, calc(100% - 44px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading {
+  max-width: 800px;
+  margin-bottom: 34px;
+}
+
+.section-heading h2 {
+  margin: 0;
   color: var(--navy);
+  font-size: clamp(2rem, 3.5vw, 3.8rem);
+  line-height: 1.03;
+  letter-spacing: -0.055em;
+}
+
+.section-heading p.description {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* RESEARCH LOGIC */
+
+.logic-section {
+  margin-bottom: 92px;
 }
 
 .research-map {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  margin: 2rem 0 3rem;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
 }
 
 .map-node {
   position: relative;
-  padding: 1.25rem 1rem;
-  border-radius: 24px;
-  background: white;
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 28px rgba(6, 38, 79, 0.08);
-  text-align: center;
-  transition: transform .25s ease, box-shadow .25s ease;
+  min-height: 250px;
+  padding: 30px 24px;
+  background: #ffffff;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .map-node:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 42px rgba(6, 38, 79, 0.14);
+  background: var(--soft);
 }
 
-.map-node .icon {
-  font-size: 2.2rem;
-  margin-bottom: .7rem;
+.map-node span {
+  display: inline-flex;
+  margin-bottom: 52px;
+  color: rgba(143, 32, 72, 0.35);
+  font-size: 0.82rem;
+  font-weight: 950;
+  letter-spacing: 0.14em;
 }
 
 .map-node h3 {
-  font-size: 1rem;
+  margin: 0 0 12px;
   color: var(--navy);
-  margin: 0 0 .35rem;
+  font-size: 1.08rem;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
 }
 
 .map-node p {
   margin: 0;
-  font-size: .9rem;
   color: var(--muted);
-  line-height: 1.45;
+  font-size: 0.96rem;
+  line-height: 1.62;
 }
 
-.section-kicker {
-  color: var(--teal);
-  font-weight: 900;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  font-size: .82rem;
-  margin-top: 2.5rem;
+.map-node::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(15, 166, 166, 0.55), transparent);
 }
 
-.projects-heading {
-  color: var(--navy);
-  font-size: 2.2rem;
-  margin: .3rem 0 1rem;
+/* PROJECTS */
+
+.projects-section {
+  margin-bottom: 96px;
 }
 
 .project-stack {
   display: grid;
-  gap: 1.4rem;
-  margin: 1.5rem 0 3rem;
+  gap: 26px;
 }
 
 .project-feature {
   display: grid;
-  grid-template-columns: 0.85fr 1.4fr;
-  gap: 1.4rem;
-  align-items: stretch;
-  border: 1px solid var(--line);
-  border-radius: 30px;
-  background: white;
-  box-shadow: 0 14px 34px rgba(6, 38, 79, 0.08);
+  grid-template-columns: 0.58fr 1.42fr;
+  min-height: 360px;
   overflow: hidden;
+  border-radius: 34px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 70px rgba(7, 29, 53, 0.08);
 }
 
-.project-symbol {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 260px;
-  background:
-    radial-gradient(circle at 30% 25%, rgba(0, 166, 166, .22), transparent 32%),
-    linear-gradient(145deg, #f3fbfb, #eef4fb);
-}
-
-.symbol-orbit {
-  width: 170px;
-  height: 170px;
-  border: 3px solid rgba(11, 95, 122, .25);
-  border-radius: 50%;
+.project-visual {
   position: relative;
+  padding: 30px;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(15, 166, 166, 0.20), transparent 32%),
+    radial-gradient(circle at 80% 76%, rgba(143, 32, 72, 0.14), transparent 30%),
+    linear-gradient(145deg, #f7fbfd, #eef6f7);
+  border-right: 1px solid var(--line);
 }
 
-.symbol-orbit::before {
+.project-visual::before {
   content: "";
   position: absolute;
-  inset: 34px;
-  border-radius: 50%;
-  border: 3px dashed rgba(123, 30, 74, .35);
+  inset: 30px;
+  border-radius: 28px;
+  border: 1px solid rgba(7, 29, 53, 0.10);
 }
 
-.symbol-orbit::after {
-  content: "♥";
+.project-index {
+  position: relative;
+  z-index: 1;
+  color: rgba(7, 29, 53, 0.22);
+  font-size: 4.8rem;
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: -0.08em;
+}
+
+.project-linework {
   position: absolute;
-  inset: 50px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--berry), #b43b6b);
-  color: white;
-  font-size: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  left: 30px;
+  right: 30px;
+  bottom: 34px;
+  height: 120px;
+  border-radius: 24px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, transparent 0 8%, rgba(7, 29, 53, 0.18) 8% 9%, transparent 9% 28%, rgba(15, 166, 166, 0.50) 28% 29%, transparent 29% 48%, rgba(7, 29, 53, 0.16) 48% 49%, transparent 49% 68%, rgba(143, 32, 72, 0.42) 68% 69%, transparent 69%),
+    linear-gradient(180deg, transparent 58px, rgba(7, 29, 53, 0.16) 59px, transparent 60px);
+}
+
+.project-linework::before {
+  content: "";
+  position: absolute;
+  inset: 30px 18px;
+  border-top: 2px solid rgba(15, 166, 166, 0.45);
+  border-radius: 50% 50% 0 0;
+}
+
+.project-linework::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: 31%;
+  top: 55px;
+  border-radius: 999px;
+  background: var(--teal);
+  box-shadow:
+    68px -20px 0 rgba(143, 32, 72, 0.75),
+    126px 18px 0 rgba(7, 29, 53, 0.35);
 }
 
 .project-body {
-  padding: 1.8rem;
+  padding: 38px 42px;
 }
 
 .project-tag {
-  display: inline-block;
-  color: #006d77;
-  background: var(--mint);
-  padding: .3rem .75rem;
+  display: inline-flex;
+  margin-bottom: 16px;
+  padding: 7px 12px;
   border-radius: 999px;
-  font-size: .82rem;
+  color: #006d70;
+  background: rgba(15, 166, 166, 0.11);
+  font-size: 0.78rem;
   font-weight: 900;
-  margin-bottom: .7rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
 }
 
 .project-body h2 {
+  margin: 0 0 16px;
   color: var(--navy);
-  font-size: 1.8rem;
-  margin: 0 0 .7rem;
+  font-size: clamp(1.55rem, 2.3vw, 2.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
 }
 
 .project-body p {
-  color: var(--ink);
-  line-height: 1.7;
+  margin: 0;
+  color: rgba(16, 32, 51, 0.78);
+  font-size: 1.02rem;
+  line-height: 1.72;
 }
 
 .focus-list {
   display: flex;
   flex-wrap: wrap;
-  gap: .5rem;
-  margin: 1rem 0;
+  gap: 8px;
+  margin: 22px 0 0;
 }
 
 .focus-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 11px;
+  border-radius: 999px;
+  color: var(--navy);
   background: var(--soft);
   border: 1px solid var(--line);
-  color: var(--navy);
-  padding: .45rem .7rem;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: .9rem;
+  font-size: 0.86rem;
+  font-weight: 800;
 }
 
 .project-actions {
-  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
 }
 
 .project-actions a {
-  display: inline-block;
-  margin: .25rem .35rem .25rem 0;
-  padding: .55rem .9rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 15px;
   border-radius: 999px;
-  text-decoration: none;
+  color: #ffffff;
   background: var(--navy);
-  color: white;
-  font-weight: 800;
-  font-size: .9rem;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 850;
+  transition: all 0.2s ease;
 }
 
 .project-actions a.secondary {
-  background: white;
   color: var(--navy);
+  background: #ffffff;
   border: 1px solid var(--line);
 }
 
 .project-actions a:hover {
+  color: #ffffff;
   background: var(--teal);
-  color: white;
+  transform: translateY(-2px);
+}
+
+/* FOUNDATIONS */
+
+.foundation-section {
+  margin-bottom: 96px;
 }
 
 .foundation-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin: 1.5rem 0 3rem;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
 }
 
 .foundation-card {
-  border-radius: 24px;
-  padding: 1.3rem;
-  background: linear-gradient(180deg, white, #f7fbfd);
-  border: 1px solid var(--line);
-  box-shadow: 0 10px 26px rgba(6, 38, 79, 0.06);
+  min-height: 230px;
+  padding: 28px 24px;
+  background: #ffffff;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .foundation-card h3 {
+  margin: 0 0 14px;
   color: var(--navy);
-  margin-top: 0;
+  font-size: 1.18rem;
+  line-height: 1.25;
 }
 
 .foundation-card p {
+  margin: 0;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.65;
+}
+
+/* VISION */
+
+.vision-section {
+  margin-bottom: 56px;
 }
 
 .vision-panel {
-  padding: 2.4rem;
-  border-radius: 30px;
-  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 58px;
+  border-radius: 36px;
+  color: #ffffff;
   background:
-    radial-gradient(circle at 85% 20%, rgba(0, 200, 190, .30), transparent 32%),
-    linear-gradient(135deg, #68153d, #061b3a 72%);
-  margin: 3rem 0;
+    radial-gradient(circle at 84% 18%, rgba(15, 166, 166, 0.30), transparent 34%),
+    linear-gradient(135deg, #68153d 0%, #071d35 68%, #064f5d 100%);
+}
+
+.vision-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+}
+
+.vision-panel > * {
+  position: relative;
+  z-index: 1;
 }
 
 .vision-panel h2 {
-  color: white;
-  margin-top: 0;
-  font-size: 2rem;
+  max-width: 820px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 3.6vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
 }
 
 .vision-route {
-  font-size: 1.25rem;
-  font-weight: 900;
-  line-height: 1.8;
-  margin: 1rem 0;
+  max-width: 1000px;
+  margin: 26px 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(1.05rem, 1.55vw, 1.38rem);
+  font-weight: 850;
+  line-height: 1.7;
 }
+
+.vision-panel p {
+  max-width: 820px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 1.05rem;
+  line-height: 1.72;
+}
+
+/* BOTTOM ACTIONS */
 
 .bottom-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: .8rem;
-  margin: 2rem 0;
+  gap: 10px;
+  margin-bottom: 80px;
 }
 
 .bottom-actions a {
-  background: var(--navy);
-  color: white;
-  text-decoration: none;
-  padding: .75rem 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 16px;
   border-radius: 999px;
-  font-weight: 800;
+  color: #ffffff;
+  background: var(--navy);
+  text-decoration: none;
+  font-weight: 850;
 }
 
 .bottom-actions a:hover {
   background: var(--teal);
 }
 
-@media (max-width: 950px) {
+/* RESPONSIVE */
+
+@media (max-width: 1020px) {
   .research-map,
   .foundation-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .project-feature {
     grid-template-columns: 1fr;
   }
 
-  .project-symbol {
-    min-height: 190px;
+  .project-visual {
+    min-height: 230px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 680px) {
+  .projects-hero,
+  .logic-section,
+  .projects-section,
+  .foundation-section,
+  .vision-section,
+  .bottom-actions {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .projects-hero {
+    margin-top: 48px;
+  }
+
+  .research-map,
+  .foundation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-body {
+    padding: 30px 24px;
+  }
+
+  .vision-panel {
+    padding: 38px 26px;
+  }
+
+  .bottom-actions a,
+  .hero-pills a {
+    width: 100%;
+    justify-content: center;
   }
 }
 </style>
 
 <div class="projects-page">
 
-<section class="projects-hero">
-  <h1>From genetic discovery to cardiovascular disease mechanisms</h1>
-  <p>
-    The Kaikkonen Lab investigates how genetic variation, regulatory elements, cellular states, and tissue context shape atherosclerotic cardiovascular disease. The research program connects functional genomics, single-cell and spatial biology, computational modelling, and translational cardiovascular medicine.
-  </p>
+  <section class="projects-hero">
+    <p class="projects-kicker">Projects · Kaikkonen Lab</p>
 
-  <div class="hero-pills">
-    <a href="#miracle">MIRACLE</a>
-    <a href="#secret">SECRET</a>
-    <a href="#singlecell">Single-cell & spatial genomics</a>
-    <a href="#finemapping">Functional fine-mapping</a>
-    <a href="#multimodal">Multimodal translation</a>
-  </div>
-</section>
+    <h1>
+      From genetic discovery to
+      <span>cardiovascular mechanisms</span>
+    </h1>
 
-<div class="section-kicker">Research logic</div>
-<div class="projects-heading">A connected discovery pipeline</div>
+    <p class="lead">
+      The Kaikkonen Lab investigates how genetic variation, regulatory elements,
+      cellular states, and tissue context shape atherosclerotic cardiovascular
+      disease. Our research connects functional genomics, single-cell and spatial
+      biology, computational modelling, and translational cardiovascular medicine.
+    </p>
 
-<div class="research-map">
-  <div class="map-node">
-    <div class="icon">🧬</div>
-    <h3>Genetic variation</h3>
-    <p>GWAS loci, disease-associated variants, and inherited risk.</p>
-  </div>
-
-  <div class="map-node">
-    <div class="icon">🎯</div>
-    <h3>Causal prioritization</h3>
-    <p>Fine-mapping and prioritization of regulatory variants.</p>
-  </div>
-
-  <div class="map-node">
-    <div class="icon">🔬</div>
-    <h3>Functional mechanisms</h3>
-    <p>MPRA, CRISPR perturbation, enhancers, and target genes.</p>
-  </div>
-
-  <div class="map-node">
-    <div class="icon">🧫</div>
-    <h3>Cellular context</h3>
-    <p>Single-cell, multiome, and spatial disease-state mapping.</p>
-  </div>
-
-  <div class="map-node">
-    <div class="icon">❤️</div>
-    <h3>Translation</h3>
-    <p>Mechanism-aware prediction and cardiovascular disease biology.</p>
-  </div>
-</div>
-
-<div class="section-kicker">Ongoing programs</div>
-<div class="projects-heading">Current research projects</div>
-
-<div class="project-stack">
-
-  <section class="project-feature" id="miracle">
-    <div class="project-symbol">
-      <div class="symbol-orbit"></div>
-    </div>
-    <div class="project-body">
-      <span class="project-tag">Ongoing · 2023–2027</span>
-      <h2>MIRACLE</h2>
-      <p>
-        MIRACLE focuses on understanding how genetic risk contributes to cardiovascular disease mechanisms and disease progression. The project integrates genetic, functional, and multi-omics data to identify causal variants, regulatory mechanisms, and pathways that shape cardiovascular risk.
-      </p>
-      <div class="focus-list">
-        <span>genetic risk</span>
-        <span>causal variants</span>
-        <span>multi-omics</span>
-        <span>pathways</span>
-        <span>risk prediction</span>
-      </div>
-      <div class="project-actions">
-        <a href="https://uefconnect.uef.fi/en/minna.kaikkonen-maatta/" target="_blank">Learn more</a>
-        <a class="secondary" href="#finemapping">Related: fine-mapping</a>
-      </div>
+    <div class="hero-pills">
+      <a href="#miracle">MIRACLE</a>
+      <a href="#secret">SECRET</a>
+      <a href="#singlecell">Single-cell & spatial genomics</a>
+      <a href="#finemapping">Functional fine-mapping</a>
+      <a href="#multimodal">Multimodal translation</a>
     </div>
   </section>
 
-  <section class="project-feature" id="secret">
-    <div class="project-symbol">
-      <div class="symbol-orbit"></div>
-    </div>
-    <div class="project-body">
-      <span class="project-tag">ERC-funded project</span>
-      <h2>SECRET</h2>
-      <p>
-        SECRET aims to functionally dissect causal regulatory variants in atherosclerotic cardiovascular disease. The project connects non-coding disease variants to enhancer activity, target genes, cellular phenotypes, and disease-relevant regulatory networks.
+  <section class="logic-section">
+    <div class="section-heading">
+      <p class="section-kicker">Research logic</p>
+      <h2>A connected discovery pipeline</h2>
+      <p class="description">
+        Our projects are organized around a variant-to-function framework:
+        identifying genetic signals, resolving their regulatory consequences,
+        placing them in cellular context, and interpreting their disease relevance.
       </p>
-      <div class="focus-list">
-        <span>non-coding variants</span>
-        <span>CRISPRi/a</span>
-        <span>endothelial cells</span>
-        <span>smooth muscle cells</span>
-        <span>regulatory networks</span>
-      </div>
-      <div class="project-actions">
-        <a href="https://uefconnect.uef.fi/en/cardiovascular-genomics-kaikkonen-lab/" target="_blank">Lab profile</a>
-        <a class="secondary" href="#regulation">Related: gene regulation</a>
-      </div>
+    </div>
+
+    <div class="research-map">
+      <article class="map-node">
+        <span>01</span>
+        <h3>Genetic variation</h3>
+        <p>GWAS loci, disease-associated variants, and inherited cardiovascular risk.</p>
+      </article>
+
+      <article class="map-node">
+        <span>02</span>
+        <h3>Causal prioritization</h3>
+        <p>Fine-mapping and functional prioritization of regulatory variants.</p>
+      </article>
+
+      <article class="map-node">
+        <span>03</span>
+        <h3>Functional mechanisms</h3>
+        <p>Enhancers, target genes, perturbation assays, and regulatory networks.</p>
+      </article>
+
+      <article class="map-node">
+        <span>04</span>
+        <h3>Cellular context</h3>
+        <p>Single-cell, multiome, and spatial mapping of disease-state programs.</p>
+      </article>
+
+      <article class="map-node">
+        <span>05</span>
+        <h3>Translation</h3>
+        <p>Mechanism-aware interpretation of cardiovascular disease biology.</p>
+      </article>
     </div>
   </section>
 
-  <section class="project-feature" id="singlecell">
-    <div class="project-symbol">
-      <div class="symbol-orbit"></div>
+  <section class="projects-section">
+    <div class="section-heading">
+      <p class="section-kicker">Ongoing programs</p>
+      <h2>Current research projects</h2>
     </div>
-    <div class="project-body">
-      <span class="project-tag">Single-cell · Spatial biology</span>
-      <h2>Single-cell and spatial genomics</h2>
-      <p>
-        This research direction maps cardiovascular disease at cell-type and spatial resolution, identifying disease-associated cell states, regulatory programs, and spatial tissue organization in vascular pathology.
-      </p>
-      <div class="focus-list">
-        <span>scRNA-seq</span>
-        <span>scATAC-seq</span>
-        <span>multiome</span>
-        <span>spatial transcriptomics</span>
-        <span>cell states</span>
-      </div>
-      <div class="project-actions">
-        <a href="https://uefconnect.uef.fi/en/cardiovascular-genomics-kaikkonen-lab/" target="_blank">Research group</a>
-        <a class="secondary" href="#multimodal">Related: multimodal integration</a>
-      </div>
+
+    <div class="project-stack">
+
+      <section class="project-feature" id="miracle">
+        <div class="project-visual">
+          <div class="project-index">01</div>
+          <div class="project-linework"></div>
+        </div>
+
+        <div class="project-body">
+          <span class="project-tag">Ongoing · 2023–2027</span>
+          <h2>MIRACLE</h2>
+          <p>
+            MIRACLE focuses on understanding how genetic risk contributes to
+            cardiovascular disease mechanisms and disease progression. The project
+            integrates genetic, functional, and multi-omics data to identify causal
+            variants, regulatory mechanisms, and pathways that shape cardiovascular risk.
+          </p>
+
+          <div class="focus-list">
+            <span>genetic risk</span>
+            <span>causal variants</span>
+            <span>multi-omics</span>
+            <span>pathways</span>
+            <span>risk prediction</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="https://uefconnect.uef.fi/en/minna.kaikkonen-maatta/" target="_blank">Learn more</a>
+            <a class="secondary" href="#finemapping">Related: fine-mapping</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-feature" id="secret">
+        <div class="project-visual">
+          <div class="project-index">02</div>
+          <div class="project-linework"></div>
+        </div>
+
+        <div class="project-body">
+          <span class="project-tag">ERC-funded project</span>
+          <h2>SECRET</h2>
+          <p>
+            SECRET aims to functionally dissect causal regulatory variants in
+            atherosclerotic cardiovascular disease. The project connects non-coding
+            disease variants to enhancer activity, target genes, cellular phenotypes,
+            and disease-relevant regulatory networks.
+          </p>
+
+          <div class="focus-list">
+            <span>non-coding variants</span>
+            <span>CRISPRi/a</span>
+            <span>endothelial cells</span>
+            <span>smooth muscle cells</span>
+            <span>regulatory networks</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="https://uefconnect.uef.fi/en/cardiovascular-genomics-kaikkonen-lab/" target="_blank">Lab profile</a>
+            <a class="secondary" href="#regulation">Related: gene regulation</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-feature" id="singlecell">
+        <div class="project-visual">
+          <div class="project-index">03</div>
+          <div class="project-linework"></div>
+        </div>
+
+        <div class="project-body">
+          <span class="project-tag">Single-cell · Spatial biology</span>
+          <h2>Single-cell and spatial genomics</h2>
+          <p>
+            This research direction maps cardiovascular disease at cell-type and
+            spatial resolution, identifying disease-associated cell states,
+            regulatory programs, and spatial tissue organization in vascular pathology.
+          </p>
+
+          <div class="focus-list">
+            <span>scRNA-seq</span>
+            <span>scATAC-seq</span>
+            <span>multiome</span>
+            <span>spatial transcriptomics</span>
+            <span>cell states</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="https://uefconnect.uef.fi/en/cardiovascular-genomics-kaikkonen-lab/" target="_blank">Research group</a>
+            <a class="secondary" href="#multimodal">Related: multimodal integration</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-feature" id="finemapping">
+        <div class="project-visual">
+          <div class="project-index">04</div>
+          <div class="project-linework"></div>
+        </div>
+
+        <div class="project-body">
+          <span class="project-tag">Variant-to-function</span>
+          <h2>Functional fine-mapping of GWAS variants</h2>
+          <p>
+            This project area translates statistical disease associations into
+            experimentally testable biological mechanisms by identifying causal
+            regulatory elements, target genes, and functional effects of non-coding
+            variants.
+          </p>
+
+          <div class="focus-list">
+            <span>GWAS interpretation</span>
+            <span>fine-mapping</span>
+            <span>MPRA</span>
+            <span>CRISPR validation</span>
+            <span>target genes</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="#secret">Related: SECRET</a>
+            <a class="secondary" href="#regulation">Related: enhancer biology</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-feature" id="multimodal">
+        <div class="project-visual">
+          <div class="project-index">05</div>
+          <div class="project-linework"></div>
+        </div>
+
+        <div class="project-body">
+          <span class="project-tag">Computational · Translational</span>
+          <h2>Multimodal translational cardiovascular genomics</h2>
+          <p>
+            This emerging direction integrates molecular, cellular, spatial,
+            genetic, and clinical data to connect disease mechanisms with phenotype
+            and support mechanism-aware prediction.
+          </p>
+
+          <div class="focus-list">
+            <span>genomics</span>
+            <span>epigenomics</span>
+            <span>spatial data</span>
+            <span>clinical integration</span>
+            <span>machine learning</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="https://uefconnect.uef.fi/en/minna.kaikkonen-maatta/" target="_blank">UEF profile</a>
+            <a class="secondary" href="#singlecell">Related: single-cell data</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-feature" id="regulation">
+        <div class="project-visual">
+          <div class="project-index">06</div>
+          <div class="project-linework"></div>
+        </div>
+
+        <div class="project-body">
+          <span class="project-tag">Core biology</span>
+          <h2>Gene regulatory mechanisms in cardiovascular disease</h2>
+          <p>
+            A central goal of the lab is to understand how regulatory elements,
+            enhancers, enhancer RNAs, chromatin programs, and transcriptional
+            networks control disease-relevant cellular phenotypes.
+          </p>
+
+          <div class="focus-list">
+            <span>enhancers</span>
+            <span>eRNAs</span>
+            <span>chromatin regulation</span>
+            <span>inflammation</span>
+            <span>variant-to-gene mechanisms</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="#secret">Related: regulatory variants</a>
+            <a class="secondary" href="#finemapping">Related: variant-to-function</a>
+          </div>
+        </div>
+      </section>
+
     </div>
   </section>
 
-  <section class="project-feature" id="finemapping">
-    <div class="project-symbol">
-      <div class="symbol-orbit"></div>
+  <section class="foundation-section">
+    <div class="section-heading">
+      <p class="section-kicker">Foundations</p>
+      <h2>Previous and foundational research</h2>
     </div>
-    <div class="project-body">
-      <span class="project-tag">Variant-to-function</span>
-      <h2>Functional fine-mapping of GWAS variants</h2>
-      <p>
-        This project area translates statistical disease associations into experimentally testable biological mechanisms by identifying causal regulatory elements, target genes, and functional effects of non-coding variants.
-      </p>
-      <div class="focus-list">
-        <span>GWAS interpretation</span>
-        <span>fine-mapping</span>
-        <span>MPRA</span>
-        <span>CRISPR validation</span>
-        <span>target genes</span>
-      </div>
-      <div class="project-actions">
-        <a href="#secret">Related: SECRET</a>
-        <a class="secondary" href="#regulation">Related: enhancer biology</a>
-      </div>
-    </div>
-  </section>
 
-  <section class="project-feature" id="multimodal">
-    <div class="project-symbol">
-      <div class="symbol-orbit"></div>
-    </div>
-    <div class="project-body">
-      <span class="project-tag">Computational · Translational</span>
-      <h2>Multimodal translational cardiovascular genomics</h2>
-      <p>
-        This emerging direction integrates molecular, cellular, spatial, genetic, and clinical data to connect disease mechanisms with phenotype and support mechanism-aware prediction.
-      </p>
-      <div class="focus-list">
-        <span>genomics</span>
-        <span>epigenomics</span>
-        <span>spatial data</span>
-        <span>clinical integration</span>
-        <span>machine learning</span>
-      </div>
-      <div class="project-actions">
-        <a href="https://uefconnect.uef.fi/en/minna.kaikkonen-maatta/" target="_blank">UEF profile</a>
-        <a class="secondary" href="#singlecell">Related: single-cell data</a>
-      </div>
+    <div class="foundation-grid">
+      <article class="foundation-card">
+        <h3>Enhancer biology</h3>
+        <p>Foundational work on enhancers and enhancer RNAs in transcriptional regulation and inflammatory gene expression.</p>
+      </article>
+
+      <article class="foundation-card">
+        <h3>Genomic dissection of atherosclerosis</h3>
+        <p>Application of next-generation sequencing technologies to identify regulatory mechanisms in cardiovascular disease.</p>
+      </article>
+
+      <article class="foundation-card">
+        <h3>Polygenic disease architecture</h3>
+        <p>Research linking genetic variation, disease-associated cell states, and heritability in cardiovascular disease.</p>
+      </article>
+
+      <article class="foundation-card">
+        <h3>Variant-to-function mapping</h3>
+        <p>Frameworks connecting non-coding variants to regulatory elements, target genes, and disease mechanisms.</p>
+      </article>
     </div>
   </section>
 
-  <section class="project-feature" id="regulation">
-    <div class="project-symbol">
-      <div class="symbol-orbit"></div>
-    </div>
-    <div class="project-body">
-      <span class="project-tag">Core biology</span>
-      <h2>Gene regulatory mechanisms in cardiovascular disease</h2>
+  <section class="vision-section">
+    <div class="vision-panel">
+      <p class="projects-kicker">Research vision</p>
+      <h2>Bridging genetic association and disease mechanism</h2>
+
+      <div class="vision-route">
+        Genetic variation → Regulatory function → Cellular mechanisms → Disease biology → Clinical translation
+      </div>
+
       <p>
-        A central goal of the lab is to understand how regulatory elements, enhancers, enhancer RNAs, chromatin programs, and transcriptional networks control disease-relevant cellular phenotypes.
+        The long-term goal is to bridge the gap between genetic association and
+        disease mechanism by combining experimental genomics, single-cell technologies,
+        computational biology, and translational cardiovascular research.
       </p>
-      <div class="focus-list">
-        <span>enhancers</span>
-        <span>eRNAs</span>
-        <span>chromatin regulation</span>
-        <span>inflammation</span>
-        <span>variant-to-gene mechanisms</span>
-      </div>
-      <div class="project-actions">
-        <a href="#secret">Related: regulatory variants</a>
-        <a class="secondary" href="#finemapping">Related: variant-to-function</a>
-      </div>
     </div>
   </section>
 
-</div>
-
-<div class="section-kicker">Foundations</div>
-<div class="projects-heading">Previous and foundational research</div>
-
-<div class="foundation-grid">
-  <div class="foundation-card">
-    <h3>Enhancer biology</h3>
-    <p>Foundational work on enhancers and enhancer RNAs in transcriptional regulation and inflammatory gene expression.</p>
+  <div class="bottom-actions">
+    <a href="../team/">Meet the team</a>
+    <a href="../publications/">Publications</a>
+    <a href="../contact/">Contact us</a>
   </div>
-
-  <div class="foundation-card">
-    <h3>Genomic dissection of atherosclerosis</h3>
-    <p>Application of next-generation sequencing technologies to identify regulatory mechanisms in cardiovascular disease.</p>
-  </div>
-
-  <div class="foundation-card">
-    <h3>Polygenic disease architecture</h3>
-    <p>Research linking genetic variation, disease-associated cell states, and heritability in cardiovascular disease.</p>
-  </div>
-
-  <div class="foundation-card">
-    <h3>Variant-to-function mapping</h3>
-    <p>Frameworks connecting non-coding variants to regulatory elements, target genes, and disease mechanisms.</p>
-  </div>
-</div>
-
-<section class="vision-panel">
-  <h2>Research vision</h2>
-  <div class="vision-route">
-    Genetic variation → Regulatory function → Cellular mechanisms → Disease biology → Clinical translation
-  </div>
-  <p>
-    The long-term goal is to bridge the gap between genetic association and disease mechanism by combining experimental genomics, single-cell technologies, computational biology, and translational cardiovascular research.
-  </p>
-</section>
-
-<div class="bottom-actions">
-  <a href="../team/">Meet the team</a>
-  <a href="../publications/">Publications</a>
-  <a href="../contact/">Contact us</a>
-</div>
 
 </div>
