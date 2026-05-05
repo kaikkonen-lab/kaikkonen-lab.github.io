@@ -24,6 +24,11 @@ header {
   }
 }
 
+/* HIDE CHECKBOX TOGGLE */
+.nav-toggle {
+  display: none;
+}
+
 /* TEXT + LINKS */
 header a {
   color: #ffffff !important;
@@ -65,11 +70,6 @@ nav {
   text-transform: uppercase;
   font-size: 0.86rem;
   letter-spacing: 0.075em;
-}
-nav-toggle {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
 }
 
 nav > a {
