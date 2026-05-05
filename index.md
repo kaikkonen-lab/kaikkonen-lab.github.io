@@ -26,17 +26,8 @@ title: Home
         </div>
       </div>
 
-      <div class="hero-visual" aria-label="Cardiovascular regulatory genomics visual">
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-        <div class="heart-system">
-          <div class="heart-core">♥</div>
-          <div class="signal signal-1">GWAS</div>
-          <div class="signal signal-2">ATAC-seq</div>
-          <div class="signal signal-3">RNA-seq</div>
-          <div class="signal signal-4">Enhancers</div>
-          <div class="signal signal-5">AI models</div>
-        </div>
+      <div class="hero-image-card">
+        <img src="images/research_logo.png" alt="Kaikkonen Lab cardiovascular regulatory genomics research">
       </div>
     </div>
   </section>
@@ -68,32 +59,37 @@ title: Home
     </div>
 
     <div class="pipeline-map">
-      <article>
+      <article class="pipeline-card genetic">
         <span>01</span>
+        <div class="pipeline-graphic"></div>
         <h3>Genetic risk</h3>
         <p>Disease-associated loci and regulatory variants.</p>
       </article>
 
-      <article>
+      <article class="pipeline-card chromatin">
         <span>02</span>
+        <div class="pipeline-graphic"></div>
         <h3>Chromatin regulation</h3>
         <p>Enhancers, accessibility, and transcription factor activity.</p>
       </article>
 
-      <article>
+      <article class="pipeline-card cellstate">
         <span>03</span>
+        <div class="pipeline-graphic"></div>
         <h3>Cell states</h3>
         <p>Immune, vascular, and metabolic disease programs.</p>
       </article>
 
-      <article>
+      <article class="pipeline-card computation">
         <span>04</span>
+        <div class="pipeline-graphic"></div>
         <h3>Computational integration</h3>
         <p>Multi-omics models for prioritizing regulatory mechanisms.</p>
       </article>
 
-      <article>
+      <article class="pipeline-card validation">
         <span>05</span>
+        <div class="pipeline-graphic"></div>
         <h3>Functional validation</h3>
         <p>Experimental systems to test disease-relevant hypotheses.</p>
       </article>
