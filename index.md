@@ -3,6 +3,9 @@ title: Home
 ---
 
 <style>
+/* ================================
+   GLOBAL THEME
+================================ */
 .home-page {
   --navy: #061b3a;
   --blue: #0b5570;
@@ -11,352 +14,19 @@ title: Home
   --ink: #102033;
   --muted: #5f7185;
   --line: #dce8ef;
-  --soft: #f7fbfd;
 }
 
-.home-open {
-  display: grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 2rem;
-  align-items: center;
-  padding: 2.2rem 0 2.5rem;
-}
-
-.home-title {
-  font-size: clamp(2.4rem, 5vw, 5rem);
-  line-height: 1.02;
-  color: var(--navy);
-  margin: 0 0 1rem;
-}
-
-.home-title span {
-  color: var(--teal);
-}
-
-.home-lead {
-  font-size: 1.18rem;
-  line-height: 1.75;
-  color: var(--ink);
-  max-width: 850px;
-}
-
-.home-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .8rem;
-  margin-top: 1.5rem;
-}
-
-.home-actions a {
-  text-decoration: none;
-  padding: .75rem 1rem;
-  border-radius: 999px;
-  font-weight: 900;
-  background: var(--navy);
-  color: white;
-  transition: all .25s ease;
-}
-
-.home-actions a.secondary {
-  background: white;
-  color: var(--navy);
-  border: 1px solid var(--line);
-}
-
-.home-actions a:hover {
-  background: var(--teal);
-  color: white;
-  transform: translateY(-3px);
-}
-
-.research-orbit {
-  position: relative;
-  height: 360px;
-  border-radius: 34px;
-  background:
-    radial-gradient(circle at center, rgba(0,166,166,.14), transparent 35%),
-    linear-gradient(135deg, #f8fcfd, #eef7fa);
-  border: 1px solid var(--line);
+/* ================================
+   ULTRA-WIDE HEADER (FIXED)
+================================ */
+header,
+.header,
+.banner,
+.hero {
+  height: 260px !important;
   overflow: hidden;
-  box-shadow: 0 16px 38px rgba(6, 38, 79, 0.08);
 }
 
-.orbit-ring {
-  position: absolute;
-  inset: 55px;
-  border: 2px dashed rgba(11, 85, 112, .28);
-  border-radius: 50%;
-  animation: rotateRing 28s linear infinite;
-}
-
-.orbit-ring.two {
-  inset: 95px;
-  animation-duration: 20s;
-  animation-direction: reverse;
-}
-
-@keyframes rotateRing {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.orbit-heart {
-  position: absolute;
-  inset: 125px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--berry), #b43b6b);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3.3rem;
-  box-shadow: 0 18px 35px rgba(123, 30, 74, .25);
-  animation: pulseHeart 3.5s ease-in-out infinite;
-}
-
-@keyframes pulseHeart {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.06); }
-}
-
-.orbit-node {
-  position: absolute;
-  width: 86px;
-  height: 86px;
-  border-radius: 24px;
-  background: white;
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 26px rgba(6, 38, 79, .10);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  animation: floatNode 4s ease-in-out infinite;
-}
-
-.orbit-node.n1 { top: 35px; left: 45%; animation-delay: 0s; }
-.orbit-node.n2 { top: 135px; right: 28px; animation-delay: .5s; }
-.orbit-node.n3 { bottom: 35px; right: 25%; animation-delay: 1s; }
-.orbit-node.n4 { bottom: 70px; left: 35px; animation-delay: 1.5s; }
-.orbit-node.n5 { top: 105px; left: 40px; animation-delay: 2s; }
-
-@keyframes floatNode {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-9px); }
-}
-
-.section-kicker {
-  color: var(--teal);
-  font-weight: 900;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  font-size: .82rem;
-  margin-top: 2.5rem;
-}
-
-.section-title {
-  color: var(--navy);
-  font-size: 2.15rem;
-  margin: .3rem 0 1rem;
-}
-
-/* Full-width discovery pipeline block */
-.discovery-full {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  width: 100vw;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  overflow: hidden;
-  padding: 3.6rem 2rem;
-  background:
-    radial-gradient(circle at 14% 18%, rgba(0, 210, 190, 0.30), transparent 28%),
-    radial-gradient(circle at 86% 12%, rgba(180, 60, 120, 0.25), transparent 30%),
-    linear-gradient(135deg, #061b3a 0%, #083e67 52%, #0a6265 100%);
-  color: white;
-}
-
-.discovery-full::before {
-  content: "";
-  position: absolute;
-  inset: -80px;
-  background:
-    linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.10) 45%, transparent 70%);
-  transform: translateX(-70%);
-  animation: discoveryShimmer 7s infinite;
-}
-
-.discovery-full::after {
-  content: "";
-  position: absolute;
-  right: -120px;
-  bottom: -140px;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  border: 36px solid rgba(255,255,255,0.08);
-}
-
-@keyframes discoveryShimmer {
-  0% { transform: translateX(-70%); }
-  45% { transform: translateX(70%); }
-  100% { transform: translateX(70%); }
-}
-
-.discovery-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.discovery-full .section-kicker {
-  color: #70fff2;
-  margin-top: 0;
-}
-
-.discovery-full .section-title {
-  color: white;
-  max-width: 900px;
-}
-
-.discovery-strip {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: .9rem;
-  margin: 1.6rem 0 0;
-}
-
-.discovery-step {
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.24);
-  backdrop-filter: blur(8px);
-  border-radius: 24px;
-  padding: 1.2rem 1rem;
-  text-align: center;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
-  transition: all .25s ease;
-}
-
-.discovery-step:hover {
-  transform: translateY(-8px) scale(1.02);
-  background: rgba(255,255,255,0.20);
-  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.18);
-}
-
-.discovery-step .icon {
-  font-size: 2rem;
-  margin-bottom: .45rem;
-  animation: floatNode 4s ease-in-out infinite;
-}
-
-.discovery-step:nth-child(2) .icon { animation-delay: .4s; }
-.discovery-step:nth-child(3) .icon { animation-delay: .8s; }
-.discovery-step:nth-child(4) .icon { animation-delay: 1.2s; }
-.discovery-step:nth-child(5) .icon { animation-delay: 1.6s; }
-
-.discovery-step strong {
-  display: block;
-  color: white;
-  margin-bottom: .3rem;
-}
-
-.discovery-step span {
-  color: rgba(255,255,255,0.82);
-  font-size: .9rem;
-  line-height: 1.45;
-}
-
-.gateway-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-  margin: 1.5rem 0 3rem;
-}
-
-.gateway-card {
-  overflow: hidden;
-  border-radius: 30px;
-  border: 1px solid var(--line);
-  background: white;
-  box-shadow: 0 14px 34px rgba(6, 38, 79, 0.08);
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.gateway-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 22px 46px rgba(6, 38, 79, 0.15);
-}
-
-.gateway-card img {
-  width: 100%;
-  height: 155px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transition: transform .45s ease;
-}
-
-.gateway-card:hover img {
-  transform: scale(1.06);
-}
-
-.gateway-content {
-  padding: 1.3rem;
-}
-
-.gateway-content h3 {
-  color: var(--navy);
-  margin: 0 0 .5rem;
-}
-
-.gateway-content p {
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.gateway-content a {
-  display: inline-block;
-  margin-top: .5rem;
-  color: var(--navy);
-  font-weight: 900;
-  text-decoration: none;
-}
-
-.gateway-content a:hover {
-  color: var(--teal);
-}
-
-.quote-panel {
-  padding: 2.2rem;
-  border-radius: 30px;
-  color: white;
-  background:
-    radial-gradient(circle at 85% 20%, rgba(0, 200, 190, .30), transparent 32%),
-    linear-gradient(135deg, #68153d, #061b3a 72%);
-  margin: 3rem 0;
-}
-
-.quote-panel p {
-  color: rgba(255,255,255,.93);
-  font-size: 1.22rem;
-  line-height: 1.7;
-  margin: 0;
-}
-
-.quote-panel cite {
-  display: block;
-  margin-top: 1rem;
-  color: rgba(255,255,255,.75);
-  font-style: normal;
-  font-weight: 700;
-}
-
-/* Header image crop: removes visual excess from top and bottom */
 header img,
 .header img,
 .banner img,
@@ -368,42 +38,227 @@ header picture img,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+
+  /* crop top + bottom */
+  object-position: center 45%;
+
+  /* subtle polish */
+  filter: brightness(0.92) contrast(1.05);
 }
 
-/* More specific crop for common lab-website-template header images */
-header,
-.header,
-.banner,
-.hero {
+/* ================================
+   INTRO SECTION
+================================ */
+.home-open {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0 2.5rem;
+}
+
+.home-title {
+  font-size: clamp(2.3rem, 5vw, 4.8rem);
+  line-height: 1.05;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+
+.home-title span {
+  color: var(--teal);
+}
+
+.home-lead {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--ink);
+  max-width: 820px;
+}
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin-top: 1.4rem;
+}
+
+.home-actions a {
+  padding: .7rem 1rem;
+  border-radius: 999px;
+  font-weight: 800;
+  background: var(--navy);
+  color: white;
+  text-decoration: none;
+  transition: .25s ease;
+}
+
+.home-actions a.secondary {
+  background: white;
+  color: var(--navy);
+  border: 1px solid var(--line);
+}
+
+.home-actions a:hover {
+  background: var(--teal);
+  transform: translateY(-3px);
+}
+
+/* ================================
+   ORBIT VISUAL
+================================ */
+.research-orbit {
+  position: relative;
+  height: 320px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #f7fbfd, #eef6f9);
+  border: 1px solid var(--line);
+}
+
+.orbit-ring {
+  position: absolute;
+  inset: 50px;
+  border: 2px dashed rgba(11,85,112,.25);
+  border-radius: 50%;
+  animation: spin 30s linear infinite;
+}
+
+.orbit-heart {
+  position: absolute;
+  inset: 110px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--berry), #b43b6b);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.orbit-node {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.orbit-node.n1 { top: 20px; left: 45%; }
+.orbit-node.n2 { top: 110px; right: 20px; }
+.orbit-node.n3 { bottom: 20px; right: 25%; }
+.orbit-node.n4 { bottom: 60px; left: 25px; }
+.orbit-node.n5 { top: 90px; left: 20px; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ================================
+   FULL-WIDTH DISCOVERY BLOCK
+================================ */
+.discovery-full {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding: 3.2rem 1.5rem;
+
+  background:
+    linear-gradient(135deg, #061b3a 0%, #083e67 50%, #0a6265 100%);
+  color: white;
+}
+
+.discovery-inner {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.discovery-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.discovery-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: .8rem;
+}
+
+.discovery-step {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  padding: 1rem;
+  border-radius: 20px;
+  text-align: center;
+  transition: .25s ease;
+}
+
+.discovery-step:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,.2);
+}
+
+.discovery-step .icon {
+  font-size: 1.8rem;
+  margin-bottom: .4rem;
+}
+
+/* ================================
+   GATEWAY CARDS
+================================ */
+.gateway-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.gateway-card {
+  border-radius: 24px;
   overflow: hidden;
+  border: 1px solid var(--line);
+  background: white;
+  transition: .25s ease;
 }
 
-header img,
-.header img,
-.banner img,
-.hero img {
-  transform: scale(1.10);
-  transform-origin: center center;
+.gateway-card:hover {
+  transform: translateY(-6px);
 }
 
-@media (max-width: 950px) {
+.gateway-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.gateway-content {
+  padding: 1rem;
+}
+
+.gateway-content h3 {
+  color: var(--navy);
+}
+
+.gateway-content a {
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--navy);
+}
+
+/* ================================
+   MOBILE
+================================ */
+@media (max-width: 900px) {
   .home-open,
   .discovery-strip,
   .gateway-grid {
     grid-template-columns: 1fr;
-  }
-
-  .research-orbit {
-    height: 310px;
-  }
-
-  .orbit-heart {
-    inset: 105px;
-  }
-
-  .discovery-full {
-    padding: 3rem 1.2rem;
   }
 }
 </style>
@@ -415,19 +270,18 @@ header img,
     <h1 class="home-title">Regulatory genomics of <span>cardiovascular disease</span></h1>
 
     <p class="home-lead">
-      The Kaikkonen Lab investigates how genetic and epigenomic regulatory mechanisms shape atherosclerotic cardiovascular disease and cardiometabolic risk. We connect disease-associated genetic variation to regulatory mechanisms, cellular states, and biological function using functional genomics, single-cell technologies, multi-omics, and computational biology.
+      The Kaikkonen Lab investigates how genetic and epigenomic regulatory mechanisms shape atherosclerotic cardiovascular disease and cardiometabolic risk.
     </p>
 
     <div class="home-actions">
       <a href="research/">Explore research</a>
-      <a class="secondary" href="projects/">View projects</a>
-      <a class="secondary" href="team/">Meet the team</a>
+      <a class="secondary" href="projects/">Projects</a>
+      <a class="secondary" href="team/">Team</a>
     </div>
   </div>
 
   <div class="research-orbit">
     <div class="orbit-ring"></div>
-    <div class="orbit-ring two"></div>
     <div class="orbit-heart">♥</div>
     <div class="orbit-node n1">🧬</div>
     <div class="orbit-node n2">🔬</div>
@@ -439,78 +293,42 @@ header img,
 
 <section class="discovery-full">
   <div class="discovery-inner">
-    <div class="section-kicker">Discovery pipeline</div>
-    <div class="section-title">A connected path from genetics to cardiovascular translation</div>
+    <div class="discovery-title">A connected path from genetics to disease</div>
 
     <div class="discovery-strip">
-      <div class="discovery-step">
-        <div class="icon">🧬</div>
-        <strong>Genetic risk</strong>
-        <span>GWAS loci and disease-associated variants</span>
-      </div>
-
-      <div class="discovery-step">
-        <div class="icon">🎯</div>
-        <strong>Prioritization</strong>
-        <span>Causal regulatory variant discovery</span>
-      </div>
-
-      <div class="discovery-step">
-        <div class="icon">🔬</div>
-        <strong>Validation</strong>
-        <span>MPRA, CRISPR, and cellular models</span>
-      </div>
-
-      <div class="discovery-step">
-        <div class="icon">🧫</div>
-        <strong>Cell states</strong>
-        <span>Single-cell and spatial disease biology</span>
-      </div>
-
-      <div class="discovery-step">
-        <div class="icon">🫀</div>
-        <strong>Translation</strong>
-        <span>Mechanisms, prediction, and therapeutic insight</span>
-      </div>
+      <div class="discovery-step"><div class="icon">🧬</div>Genetic risk</div>
+      <div class="discovery-step"><div class="icon">🎯</div>Prioritization</div>
+      <div class="discovery-step"><div class="icon">🔬</div>Validation</div>
+      <div class="discovery-step"><div class="icon">🧫</div>Cell states</div>
+      <div class="discovery-step"><div class="icon">❤️</div>Translation</div>
     </div>
   </div>
 </section>
-
-<div class="section-kicker">Explore</div>
-<div class="section-title">Learn more about our work</div>
 
 <div class="gateway-grid">
   <div class="gateway-card">
-    <img src="images/research_logo.png" alt="Research graphic">
+    <img src="images/research_logo.png">
     <div class="gateway-content">
       <h3>Research</h3>
-      <p>Explore the lab’s scientific themes in cardiovascular genomics, gene regulation, epigenomics, and variant interpretation.</p>
-      <a href="research/">Explore research →</a>
+      <a href="research/">Explore →</a>
     </div>
   </div>
 
   <div class="gateway-card">
-    <img src="images/projects.png" alt="Projects graphic">
+    <img src="images/projects.png">
     <div class="gateway-content">
       <h3>Projects</h3>
-      <p>Browse ongoing and foundational projects linking genetic discovery, regulatory function, cellular context, and translation.</p>
-      <a href="projects/">Browse projects →</a>
+      <a href="projects/">Explore →</a>
     </div>
   </div>
 
   <div class="gateway-card">
-    <img src="images/team.jpg" alt="Team photo">
+    <img src="images/team.jpg">
     <div class="gateway-content">
       <h3>Team</h3>
-      <p>Meet the interdisciplinary researchers working across cardiovascular biology, functional genomics, and computational analysis.</p>
-      <a href="team/">Meet the team →</a>
+      <a href="team/">Explore →</a>
     </div>
   </div>
 </div>
-
-<section class="quote-panel">
-  <p>“Science and everyday life cannot and should not be separated.”</p>
-  <cite>— Rosalind Franklin</cite>
-</section>
 
 </div>
