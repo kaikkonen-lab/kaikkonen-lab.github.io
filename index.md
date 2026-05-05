@@ -14,23 +14,7 @@ title: Home
       The Kaikkonen Lab investigates how chromatin, RNA, macrophage biology, and genetic variation shape atherosclerosis and cardiometabolic risk. We combine experimental models, genome-wide profiling, and computational analysis to move from regulatory discovery toward disease insight.
     </p>
 
-    <div class="home-actions" aria-label="Homepage navigation links">
-      <a class="primary-action" href="{{ '/research/' | relative_url }}">Explore research</a>
-      <a href="{{ '/projects/' | relative_url }}">View projects</a>
-      <a href="{{ '/team/' | relative_url }}">Meet the team</a>
-    </div>
-  </div>
 
-  <div class="home-science-card" aria-label="Research theme graphic">
-    <div class="science-network">
-      <span class="network-core">CVD</span>
-      <span class="network-node node-a">DNA</span>
-      <span class="network-node node-b">RNA</span>
-      <span class="network-node node-c">Cells</span>
-      <span class="network-node node-d">Data</span>
-      <span class="network-node node-e">Risk</span>
-    </div>
-  </div>
 </section>
 
 <section class="discovery-band" aria-label="Discovery pipeline">
