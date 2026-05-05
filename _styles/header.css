@@ -55,6 +55,12 @@ nav {
   letter-spacing: 0.075em;
 }
 
+nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
 nav > a {
   padding: 8px 11px;
   border-radius: 999px;
