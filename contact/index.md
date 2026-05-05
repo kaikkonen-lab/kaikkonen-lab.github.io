@@ -375,11 +375,6 @@ nav:
         <h2>
           Research collaborations, student enquiries, and joining the group.
         </h2>
-
-        <p>
-          For research collaborations, student enquiries, and questions about
-          joining the group, please contact Professor Minna Kaikkonen-Määttä.
-        </p>
       </div>
 
       <div class="contact-details">
