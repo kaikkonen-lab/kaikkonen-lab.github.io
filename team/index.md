@@ -26,6 +26,37 @@ nav:
 .team-hero {
   width: min(1180px, calc(100% - 44px));
   margin: 64px auto 84px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.team-hero-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 430px;
+  border-radius: 36px;
+  background: var(--navy);
+  box-shadow: 0 24px 70px rgba(7, 29, 53, 0.12);
+}
+
+.team-hero-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 430px;
+  object-fit: cover;
+  display: block;
+}
+
+.team-hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(7, 29, 53, 0.25), transparent 55%),
+    linear-gradient(135deg, rgba(143, 32, 72, 0.12), rgba(15, 166, 166, 0.12));
+  pointer-events: none;
 }
 
 .team-kicker,
@@ -39,12 +70,12 @@ nav:
 }
 
 .team-title {
-  max-width: 1060px;
+  max-width: 740px;
   margin: 0;
   color: var(--navy);
-  font-size: clamp(2.8rem, 6vw, 6.2rem);
-  line-height: 0.92;
-  letter-spacing: -0.075em;
+  font-size: clamp(2.35rem, 4.6vw, 4.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
   font-weight: 950;
 }
 
@@ -54,18 +85,18 @@ nav:
 }
 
 .team-lead {
-  max-width: 880px;
-  margin: 30px 0 0;
+  max-width: 760px;
+  margin: 26px 0 0;
   color: rgba(16, 32, 51, 0.78);
-  font-size: clamp(1.05rem, 1.35vw, 1.24rem);
-  line-height: 1.75;
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  line-height: 1.72;
 }
 
 .team-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 34px;
+  margin-top: 30px;
 }
 
 .team-actions a {
@@ -322,6 +353,15 @@ nav:
 /* RESPONSIVE */
 
 @media (max-width: 900px) {
+  .team-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .team-hero-image,
+  .team-hero-image img {
+    min-height: 360px;
+  }
+
   .team-statement {
     grid-template-columns: 1fr;
   }
@@ -349,6 +389,15 @@ nav:
     margin-top: 48px;
   }
 
+  .team-hero-image,
+  .team-hero-image img {
+    min-height: 300px;
+  }
+
+  .team-title {
+    font-size: clamp(2.1rem, 11vw, 3.6rem);
+  }
+
   .team-actions a,
   .join-panel a {
     width: 100%;
@@ -369,25 +418,33 @@ nav:
 <div class="team-page">
 
   <section class="team-hero">
-    <p class="team-kicker">Team · Kaikkonen Lab</p>
 
-    <h1 class="team-title">
-      People behind
-      <span>cardiovascular genomics</span>
-    </h1>
-
-    <p class="team-lead">
-      We are an interdisciplinary team working across cardiovascular epigenomics,
-      gene regulation, single-cell technologies, functional genomics, and
-      computational biology to understand disease mechanisms and translate
-      genetic discoveries into biological insight.
-    </p>
-
-    <div class="team-actions">
-      <a href="#current-members">Current members</a>
-      <a class="secondary" href="#alumni">Alumni</a>
-      <a class="secondary" href="join">Interested in joining?</a>
+    <div class="team-hero-image">
+      <img src="../images/team.jpg" alt="Kaikkonen Lab team">
     </div>
+
+    <div class="team-hero-content">
+      <p class="team-kicker">Team · Kaikkonen Lab</p>
+
+      <h1 class="team-title">
+        People behind
+        <span>the lab</span>
+      </h1>
+
+      <p class="team-lead">
+        We are an interdisciplinary team working across cardiovascular epigenomics,
+        gene regulation, single-cell technologies, functional genomics, and
+        computational biology to understand disease mechanisms and translate
+        genetic discoveries into biological insight.
+      </p>
+
+      <div class="team-actions">
+        <a href="#current-members">Current members</a>
+        <a class="secondary" href="#alumni">Alumni</a>
+        <a class="secondary" href="join">Interested in joining?</a>
+      </div>
+    </div>
+
   </section>
 
   <section class="team-statement">
