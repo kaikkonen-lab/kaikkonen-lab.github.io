@@ -293,8 +293,6 @@ header picture img,
 
 <section class="discovery-full">
   <div class="discovery-inner">
-    <div class="discovery-title">A connected path from genetics to disease</div>
-
     <div class="discovery-strip">
       <div class="discovery-step"><div class="icon">🧬</div>Genetic risk</div>
       <div class="discovery-step"><div class="icon">🎯</div>Prioritization</div>
