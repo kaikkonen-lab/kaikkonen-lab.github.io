@@ -458,305 +458,380 @@
   <section class="background" data-size="page">
     <style>
 .team-page {
-  --navy: #061b3a;
-  --blue: #0b5570;
-  --teal: #00a6a6;
-  --berry: #7b1e4a;
+  --navy: #071d35;
+  --deep: #061625;
+  --blue: #0c4d68;
+  --teal: #0fa6a6;
+  --berry: #8f2048;
   --ink: #102033;
-  --muted: #5f7185;
-  --line: #dce8ef;
-  --soft: #f7fbfd;
+  --muted: #617487;
+  --line: rgba(7, 29, 53, 0.12);
+  --soft: #f5f8fb;
+  --paper: #ffffff;
+
+  color: var(--ink);
 }
 
-.team-open {
-  display: grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 2rem;
-  align-items: center;
-  padding: 2.3rem 0 3rem;
+/* HERO */
+
+.team-hero {
+  width: min(1180px, calc(100% - 44px));
+  margin: 64px auto 84px;
+}
+
+.team-kicker,
+.section-kicker {
+  margin: 0 0 16px;
+  color: var(--berry);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .team-title {
-  font-size: clamp(2.5rem, 5vw, 5rem);
-  line-height: 1.02;
+  max-width: 1060px;
+  margin: 0;
   color: var(--navy);
-  margin: 0 0 1rem;
+  font-size: clamp(2.8rem, 6vw, 6.2rem);
+  line-height: 0.92;
+  letter-spacing: -0.075em;
+  font-weight: 950;
 }
 
 .team-title span {
+  display: block;
   color: var(--teal);
 }
 
 .team-lead {
-  font-size: 1.18rem;
+  max-width: 880px;
+  margin: 30px 0 0;
+  color: rgba(16, 32, 51, 0.78);
+  font-size: clamp(1.05rem, 1.35vw, 1.24rem);
   line-height: 1.75;
-  color: var(--ink);
-  max-width: 850px;
 }
 
 .team-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: .8rem;
-  margin-top: 1.5rem;
+  gap: 10px;
+  margin-top: 34px;
 }
 
 .team-actions a {
-  text-decoration: none;
-  padding: .75rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 16px;
   border-radius: 999px;
-  font-weight: 900;
+  color: #ffffff;
   background: var(--navy);
-  color: white;
-  transition: all .25s ease;
+  text-decoration: none;
+  font-weight: 850;
+  transition: all 0.2s ease;
 }
 
 .team-actions a.secondary {
-  background: white;
   color: var(--navy);
+  background: #ffffff;
   border: 1px solid var(--line);
 }
 
 .team-actions a:hover {
+  color: #ffffff;
   background: var(--teal);
-  color: white;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
-.team-orbit {
-  position: relative;
-  height: 360px;
-  border-radius: 34px;
-  background:
-    radial-gradient(circle at center, rgba(0,166,166,.14), transparent 35%),
-    linear-gradient(135deg, #f8fcfd, #eef7fa);
-  border: 1px solid var(--line);
-  overflow: hidden;
-  box-shadow: 0 16px 38px rgba(6, 38, 79, 0.08);
+/* INTRO STATEMENT */
+
+.team-statement {
+  width: min(1180px, calc(100% - 44px));
+  margin: 0 auto 90px;
+  padding: 46px 0;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 42px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
-.team-ring {
-  position: absolute;
-  inset: 55px;
-  border: 2px dashed rgba(11, 85, 112, .28);
-  border-radius: 50%;
-  animation: rotateRing 28s linear infinite;
+.statement-number {
+  color: rgba(143, 32, 72, 0.20);
+  font-size: 5rem;
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: -0.08em;
 }
 
-.team-ring.two {
-  inset: 95px;
-  animation-duration: 20s;
-  animation-direction: reverse;
+.team-statement h2 {
+  max-width: 920px;
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(2rem, 3.5vw, 3.8rem);
+  line-height: 1.03;
+  letter-spacing: -0.055em;
 }
 
-@keyframes rotateRing {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.team-statement p {
+  max-width: 860px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 1.06rem;
+  line-height: 1.72;
 }
 
-.team-center {
-  position: absolute;
-  inset: 125px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--berry), #b43b6b);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3.1rem;
-  box-shadow: 0 18px 35px rgba(123, 30, 74, .25);
-  animation: pulseTeam 3.5s ease-in-out infinite;
-}
+/* SECTION HEADINGS */
 
-@keyframes pulseTeam {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.06); }
-}
-
-.team-node {
-  position: absolute;
-  width: 86px;
-  height: 86px;
-  border-radius: 24px;
-  background: white;
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 26px rgba(6, 38, 79, .10);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  animation: floatNode 4s ease-in-out infinite;
-}
-
-.team-node.n1 { top: 35px; left: 45%; animation-delay: 0s; }
-.team-node.n2 { top: 135px; right: 28px; animation-delay: .5s; }
-.team-node.n3 { bottom: 35px; right: 25%; animation-delay: 1s; }
-.team-node.n4 { bottom: 70px; left: 35px; animation-delay: 1.5s; }
-.team-node.n5 { top: 105px; left: 40px; animation-delay: 2s; }
-
-@keyframes floatNode {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-9px); }
-}
-
-.section-kicker {
-  color: var(--teal);
-  font-weight: 900;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  font-size: .82rem;
-  margin-top: 2.5rem;
+.members-block,
+.join-section,
+.alumni-block,
+.support-block {
+  width: min(1180px, calc(100% - 44px));
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-title {
+  max-width: 820px;
+  margin: 0;
   color: var(--navy);
-  font-size: 2.15rem;
-  margin: .3rem 0 1rem;
+  font-size: clamp(2rem, 3.5vw, 3.8rem);
+  line-height: 1.03;
+  letter-spacing: -0.055em;
 }
 
-.team-values {
+.section-heading {
+  margin-bottom: 34px;
+}
+
+/* MEMBER GROUPS */
+
+.members-block {
+  margin-bottom: 96px;
+}
+
+.member-stack {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: .9rem;
-  margin: 1.4rem 0 3rem;
-}
-
-.value-card {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 1.2rem 1rem;
-  text-align: center;
-  box-shadow: 0 10px 26px rgba(6, 38, 79, 0.07);
-  transition: all .25s ease;
-}
-
-.value-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 18px 38px rgba(6, 38, 79, 0.13);
-}
-
-.value-card .icon {
-  font-size: 2rem;
-  margin-bottom: .45rem;
-}
-
-.value-card strong {
-  display: block;
-  color: var(--navy);
-  margin-bottom: .3rem;
-}
-
-.value-card span {
-  color: var(--muted);
-  font-size: .9rem;
-  line-height: 1.45;
+  gap: 22px;
 }
 
 .member-section {
-  padding: 1.7rem;
-  margin: 1.2rem 0 2rem;
-  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+  border-radius: 34px;
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, white, #f8fbfd);
-  box-shadow: 0 12px 30px rgba(6, 38, 79, 0.06);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 251, 253, 0.94));
+  box-shadow: 0 24px 70px rgba(7, 29, 53, 0.07);
 }
 
-.member-section h3 {
-  color: var(--navy);
-  margin-top: 0;
-  font-size: 1.45rem;
+.member-section::before {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  right: -70px;
+  top: -70px;
+  border-radius: 999px;
+  background: rgba(15, 166, 166, 0.11);
 }
 
 .member-section.pi {
   background:
-    radial-gradient(circle at 90% 15%, rgba(0,166,166,.18), transparent 32%),
-    linear-gradient(180deg, #ffffff, #f4fbfb);
+    radial-gradient(circle at 90% 10%, rgba(15, 166, 166, 0.18), transparent 34%),
+    linear-gradient(145deg, #ffffff, #f2faf9);
+}
+
+.member-section h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 24px;
+  color: var(--navy);
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.member-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* JOIN PANEL */
+
+.join-section {
+  margin-bottom: 92px;
 }
 
 .join-panel {
-  padding: 2.3rem;
-  border-radius: 30px;
-  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 58px;
+  border-radius: 36px;
+  color: #ffffff;
   background:
-    radial-gradient(circle at 85% 20%, rgba(0, 200, 190, .30), transparent 32%),
-    linear-gradient(135deg, #68153d, #061b3a 72%);
-  margin: 3rem 0;
+    radial-gradient(circle at 84% 18%, rgba(15, 166, 166, 0.30), transparent 34%),
+    linear-gradient(135deg, #68153d 0%, #071d35 68%, #064f5d 100%);
+}
+
+.join-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+}
+
+.join-panel > * {
+  position: relative;
+  z-index: 1;
 }
 
 .join-panel h2 {
-  color: white;
-  margin-top: 0;
-  font-size: 2rem;
+  max-width: 860px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 3.5vw, 3.8rem);
+  line-height: 1.03;
+  letter-spacing: -0.055em;
 }
 
 .join-panel p {
-  color: rgba(255,255,255,.9);
-  line-height: 1.7;
-  max-width: 850px;
+  max-width: 860px;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+  line-height: 1.72;
 }
 
 .join-panel a {
-  display: inline-block;
-  text-decoration: none;
-  margin-top: .7rem;
-  padding: .75rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  margin-top: 28px;
+  padding: 0 16px;
   border-radius: 999px;
-  background: white;
   color: var(--navy);
+  background: #ffffff;
+  text-decoration: none;
   font-weight: 900;
+  transition: all 0.2s ease;
 }
 
 .join-panel a:hover {
+  color: #ffffff;
   background: var(--teal);
-  color: white;
+  transform: translateY(-2px);
+}
+
+/* ALUMNI */
+
+.alumni-block {
+  margin-bottom: 96px;
+}
+
+/* SUPPORT */
+
+.support-block {
+  margin-bottom: 80px;
 }
 
 .funding-card {
-  border-radius: 28px;
+  margin-top: 28px;
+  padding: 34px;
+  border-radius: 34px;
   border: 1px solid var(--line);
-  padding: 1.6rem;
-  background: white;
-  box-shadow: 0 12px 30px rgba(6, 38, 79, 0.07);
-  margin: 1.2rem 0 3rem;
-  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 24px 70px rgba(7, 29, 53, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .funding-card img {
-  max-width: 240px;
+  max-width: 250px;
+  width: 100%;
   height: auto;
-  transition: transform .25s ease;
+  display: block;
+  filter: grayscale(100%);
+  opacity: 0.9;
+  transition: all 0.25s ease;
 }
 
 .funding-card img:hover {
-  transform: scale(1.04);
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: translateY(-3px);
 }
 
-@media (max-width: 950px) {
-  .team-open,
-  .team-values {
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .team-statement {
     grid-template-columns: 1fr;
   }
 
-  .team-orbit {
-    height: 310px;
+  .statement-number {
+    font-size: 4rem;
   }
 
-  .team-center {
-    inset: 105px;
+  .join-panel {
+    padding: 42px 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .team-hero,
+  .team-statement,
+  .members-block,
+  .join-section,
+  .alumni-block,
+  .support-block {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .team-hero {
+    margin-top: 48px;
+  }
+
+  .team-actions a,
+  .join-panel a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .member-section {
+    padding: 26px 22px;
+    border-radius: 28px;
+  }
+
+  .funding-card {
+    padding: 28px 20px;
   }
 }
 </style>
 
 <div class="team-page">
 
-<section class="team-open">
-  <div>
-    <h1 class="team-title">People behind <span>cardiovascular genomics</span>
-</h1>
+  <section class="team-hero">
+    <p class="team-kicker">Team · Kaikkonen Lab</p>
+
+    <h1 class="team-title">
+      People behind
+      <span>cardiovascular genomics</span>
+    </h1>
 
     <p class="team-lead">
-      We are an interdisciplinary team working across cardiovascular epigenomics, gene regulation, single-cell technologies, functional genomics, and computational biology to understand disease mechanisms and translate genetic discoveries into biological insight.
+      We are an interdisciplinary team working across cardiovascular epigenomics,
+      gene regulation, single-cell technologies, functional genomics, and
+      computational biology to understand disease mechanisms and translate
+      genetic discoveries into biological insight.
     </p>
 
     <div class="team-actions">
@@ -764,20 +839,38 @@
       <a class="secondary" href="#alumni">Alumni</a>
       <a class="secondary" href="join">Interested in joining?</a>
     </div>
-  </div>
+  </section>
 
- 
-</section>
+  <section class="team-statement">
+    <div class="statement-number">01</div>
 
+    <div>
+      <p class="team-kicker">Working culture</p>
 
-  
+      <h2>
+        Experimental biology, computational analysis, and collaborative science.
+      </h2>
 
-<div id="current-members" class="section-kicker">Current lab members</div>
-<div class="section-title">Meet the team</div>
+      <p>
+        Our lab brings together researchers with complementary expertise in
+        molecular biology, genomics, vascular biology, data analysis, and disease
+        interpretation. We value careful experimental design, transparent analysis,
+        interdisciplinary collaboration, and mechanistic thinking.
+      </p>
+    </div>
+  </section>
 
-<section class="member-section pi">
-  <h3>Principal Investigator</h3>
-  
+  <section id="current-members" class="members-block">
+    <div class="section-heading">
+      <p class="section-kicker">Current lab members</p>
+      <h2 class="section-title">Meet the team</h2>
+    </div>
+
+    <div class="member-stack">
+
+      <section class="member-section pi">
+        <h3>Principal Investigator</h3>
+        
 
 
 
@@ -821,11 +914,11 @@
   
 
 
-</section>
+      </section>
 
-<section class="member-section">
-  <h3>Senior Researchers</h3>
-  
+      <section class="member-section">
+        <h3>Senior Researchers</h3>
+        
 
 
 
@@ -937,11 +1030,11 @@
   
 
 
-</section>
+      </section>
 
-<section class="member-section">
-  <h3>Postdoctoral Researchers</h3>
-  
+      <section class="member-section">
+        <h3>Postdoctoral Researchers</h3>
+        
 
 
 
@@ -1053,11 +1146,11 @@
   
 
 
-</section>
+      </section>
 
-<section class="member-section">
-  <h3>Doctoral Researchers</h3>
-  
+      <section class="member-section">
+        <h3>Doctoral Researchers</h3>
+        
 
 
 
@@ -1293,11 +1386,11 @@
   
 
 
-</section>
+      </section>
 
-<section class="member-section">
-  <h3>Technicians</h3>
-  
+      <section class="member-section">
+        <h3>Technicians</h3>
+        
 
 
 
@@ -1376,11 +1469,11 @@
   
 
 
-</section>
+      </section>
 
-<section class="member-section">
-  <h3>Other Group Members</h3>
-  
+      <section class="member-section">
+        <h3>Other Group Members</h3>
+        
 
 
 
@@ -1492,37 +1585,56 @@
   
 
 
-</section>
+      </section>
 
-<section class="join-panel">
-  <h2>Interested in joining us?</h2>
-  <p>
-    We welcome motivated students and researchers interested in cardiovascular genomics, functional variant interpretation, gene regulation, single-cell technologies, and computational biology.
-  </p>
-  <a href="join">Learn about opportunities</a>
-</section>
+    </div>
+  </section>
 
-<div id="alumni" class="section-kicker">Former members</div>
-<div class="section-title">Alumni</div>
+  <section class="join-section">
+    <div class="join-panel">
+      <p class="team-kicker">Opportunities</p>
 
-<section class="member-section">
-  
+      <h2>Interested in joining us?</h2>
+
+      <p>
+        We welcome motivated students and researchers interested in cardiovascular
+        genomics, functional variant interpretation, gene regulation, single-cell
+        technologies, and computational biology.
+      </p>
+
+      <a href="join">Learn about opportunities</a>
+    </div>
+  </section>
+
+  <section id="alumni" class="alumni-block">
+    <div class="section-heading">
+      <p class="section-kicker">Former members</p>
+      <h2 class="section-title">Alumni</h2>
+    </div>
+
+    <section class="member-section">
+      
 
 
 
 
 
 
-</section>
+    </section>
+  </section>
 
-<div class="section-kicker">Support</div>
-<div class="section-title">Funding and institutional support</div>
+  <section class="support-block">
+    <div class="section-heading">
+      <p class="section-kicker">Support</p>
+      <h2 class="section-title">Funding and institutional support</h2>
+    </div>
 
-<div class="funding-card">
-  <a href="https://www.uef.fi/fi" target="_blank">
-    <img src="https://sites.uef.fi/europeanforestry/wp-content/uploads/sites/62/2020/05/UEF_eng_pysty_1_black-1024x892.jpg" alt="University of Eastern Finland">
-  </a>
-</div>
+    <div class="funding-card">
+      <a href="https://www.uef.fi/fi" target="_blank">
+        <img src="https://sites.uef.fi/europeanforestry/wp-content/uploads/sites/62/2020/05/UEF_eng_pysty_1_black-1024x892.jpg" alt="University of Eastern Finland">
+      </a>
+    </div>
+  </section>
 
 </div>
   </section>
