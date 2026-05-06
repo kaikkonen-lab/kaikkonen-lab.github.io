@@ -24,26 +24,22 @@ title: Home
         cardiometabolic disease.
       </p>
 
-      <div class="hero-actions">
-        <a href="research/" class="action action-primary">Explore our science</a>
-        <a href="team/" class="action action-secondary">Meet the lab</a>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="research-statement">
-    <div>
       <p class="eyebrow">Research philosophy</p>
-      <h2>
+      <h4>
         We connect molecular mechanisms to disease-relevant biology.
-      </h2>
+      </h4>
       <p>
         Cardiovascular disease is driven by complex interactions between inherited
         risk, regulatory elements, immune and vascular cell states, and environmental
         exposures. Our work integrates experimental and computational approaches to
         understand these mechanisms at the regulatory resolution.
       </p>
+
+      <div class="hero-actions">
+        <a href="research/" class="action action-primary">Explore our science</a>
+        <a href="team/" class="action action-secondary">Meet the lab</a>
+      </div>
+
     </div>
   </section>
 
