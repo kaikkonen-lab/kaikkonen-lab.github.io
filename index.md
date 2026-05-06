@@ -24,7 +24,7 @@ title: Home
         cardiometabolic disease.
       </p>
 
-      <p class="eyebrow">Research philosophy</p>
+
       <h4>
         We connect molecular mechanisms to disease-relevant biology.
       </h4>
