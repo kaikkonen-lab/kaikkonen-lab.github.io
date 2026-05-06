@@ -469,7 +469,7 @@ nav:
   </section>
 
   <section class="team-statement">
-    <div class="statement-number">01</div>
+    <div class="statement-number"></div>
 
     <div>
       <p class="team-kicker">Working culture</p>
