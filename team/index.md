@@ -24,39 +24,50 @@ nav:
 /* HERO */
 
 .team-hero {
+  position: relative;
   width: min(1180px, calc(100% - 44px));
   margin: 64px auto 84px;
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 42px;
-  align-items: center;
+  min-height: 620px;
+  border-radius: 42px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  background: var(--navy);
+  box-shadow: 0 34px 90px rgba(7, 29, 53, 0.16);
 }
 
 .team-hero-image {
-  position: relative;
-  overflow: hidden;
-  min-height: 430px;
-  border-radius: 36px;
-  background: var(--navy);
-  box-shadow: 0 24px 70px rgba(7, 29, 53, 0.12);
+  position: absolute;
+  inset: 0;
 }
 
 .team-hero-image img {
   width: 100%;
   height: 100%;
-  min-height: 430px;
   object-fit: cover;
+  object-position: center center;
   display: block;
+  transform: scale(1.02);
 }
 
-.team-hero-image::after {
-  content: "";
+.team-hero-overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to top, rgba(7, 29, 53, 0.25), transparent 55%),
-    linear-gradient(135deg, rgba(143, 32, 72, 0.12), rgba(15, 166, 166, 0.12));
-  pointer-events: none;
+    linear-gradient(
+      to top,
+      rgba(7, 29, 53, 0.92) 0%,
+      rgba(7, 29, 53, 0.74) 30%,
+      rgba(7, 29, 53, 0.28) 58%,
+      rgba(7, 29, 53, 0.08) 100%
+    );
+}
+
+.team-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 58px;
 }
 
 .team-kicker,
@@ -69,13 +80,17 @@ nav:
   text-transform: uppercase;
 }
 
+.team-hero .team-kicker {
+  color: rgba(255, 255, 255, 0.78);
+}
+
 .team-title {
-  max-width: 740px;
+  max-width: 760px;
   margin: 0;
-  color: var(--navy);
-  font-size: clamp(2.35rem, 4.6vw, 4.8rem);
-  line-height: 0.98;
-  letter-spacing: -0.065em;
+  color: #ffffff;
+  font-size: clamp(2.2rem, 4vw, 4.6rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
   font-weight: 950;
 }
 
@@ -86,9 +101,9 @@ nav:
 
 .team-lead {
   max-width: 760px;
-  margin: 26px 0 0;
-  color: rgba(16, 32, 51, 0.78);
-  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(1rem, 1.1vw, 1.08rem);
   line-height: 1.72;
 }
 
@@ -106,21 +121,21 @@ nav:
   padding: 0 16px;
   border-radius: 999px;
   color: #ffffff;
-  background: var(--navy);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   text-decoration: none;
   font-weight: 850;
-  transition: all 0.2s ease;
+  transition: all 0.22s ease;
 }
 
 .team-actions a.secondary {
-  color: var(--navy);
-  background: #ffffff;
-  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .team-actions a:hover {
-  color: #ffffff;
   background: var(--teal);
+  border-color: var(--teal);
   transform: translateY(-2px);
 }
 
@@ -354,12 +369,11 @@ nav:
 
 @media (max-width: 900px) {
   .team-hero {
-    grid-template-columns: 1fr;
+    min-height: 540px;
   }
 
-  .team-hero-image,
-  .team-hero-image img {
-    min-height: 360px;
+  .team-hero-content {
+    padding: 40px 34px;
   }
 
   .team-statement {
@@ -387,15 +401,16 @@ nav:
 
   .team-hero {
     margin-top: 48px;
+    min-height: 500px;
+    border-radius: 30px;
   }
 
-  .team-hero-image,
-  .team-hero-image img {
-    min-height: 300px;
+  .team-hero-content {
+    padding: 32px 24px;
   }
 
   .team-title {
-    font-size: clamp(2.1rem, 11vw, 3.6rem);
+    font-size: clamp(2rem, 10vw, 3.2rem);
   }
 
   .team-actions a,
@@ -423,8 +438,13 @@ nav:
       <img src="../images/team.jpg" alt="Kaikkonen Lab team">
     </div>
 
+    <div class="team-hero-overlay"></div>
+
     <div class="team-hero-content">
-      <p class="team-kicker">Team · Kaikkonen Lab</p>
+
+      <p class="team-kicker">
+        Team · Kaikkonen Lab
+      </p>
 
       <h1 class="team-title">
         People behind
@@ -443,6 +463,7 @@ nav:
         <a class="secondary" href="#alumni">Alumni</a>
         <a class="secondary" href="join">Interested in joining?</a>
       </div>
+
     </div>
 
   </section>
