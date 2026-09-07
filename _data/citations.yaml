@@ -13,6 +13,26 @@
   orcid: 0000-0001-6294-0979
   plugin: orcid.py
   file: orcid.yaml
+- id: doi:10.64898/2026.05.15.725379
+  title: Cross-Cohort Optimal Transport Maps Macrophage Plasticity and Competing Routes
+    to Inflammation and Fibrosis in Human Atherosclerotic Plaques
+  authors:
+  - Sergio Vazquez Montes de Oca
+  - Ariadna Acedo Terrades
+  - "Jose F Carre\xF1o Martinez"
+  - Philipp Kirchner
+  - "Tiit \xD6rd"
+  - Minna U Kaikkonen
+  - Siting Wei
+  - Stefan Freigang
+  - Inti Zlobec
+  - "Mar\xEDa Rodr\xEDguez Mart\xEDnez"
+  publisher: openRxiv
+  date: '2026-05-19'
+  link: https://doi.org/hb5hgg
+  orcid: 0000-0001-6294-0979
+  plugin: orcid.py
+  file: orcid.yaml
 - id: doi:10.1093/brain/awaf277
   title: 'Alzheimer and cardiovascular genetic scores and cognition: the FINGER randomized
     controlled trial'
@@ -306,8 +326,8 @@
   plugin: orcid.py
   file: orcid.yaml
 - id: doi:10.1093/cvr/cvae028
-  title: "Translatome profiling reveals <i>Itih4</i> as a novel smooth muscle cell\u2013\
-    specific gene in atherosclerosis"
+  title: "Translatome profiling reveals\n                    <i>Itih4</i>\n      \
+    \              as a novel smooth muscle cell\u2013specific gene in atherosclerosis"
   authors:
   - Aarthi Ravindran
   - Lari Holappa
@@ -505,8 +525,9 @@
   plugin: orcid.py
   file: orcid.yaml
 - id: doi:10.1128/MCB.00594-20
-  title: Genomic Landscapes of Noncoding RNAs Regulating <i>VEGFA</i> and <i>VEGFC</i>
-    Expression in Endothelial Cells
+  title: "Genomic Landscapes of Noncoding RNAs Regulating\n                    <i>VEGFA</i>\n\
+    \                    and\n                    <i>VEGFC</i>\n                 \
+    \   Expression in Endothelial Cells"
   authors:
   - Isidore Mushimiyimana
   - Vanesa Tomas Bosch
@@ -1696,7 +1717,7 @@
   authors:
   - "Seppo Yl\xE4\u2010Herttuala"
   - Minna Kaikkonen
-  publisher: EMBO reports
+  publisher: The EMBO Reports
   date: '2014-01-15'
   link: https://doi.org/f2pz36
   orcid: 0000-0001-6294-0979
